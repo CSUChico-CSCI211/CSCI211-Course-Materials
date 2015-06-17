@@ -11,3 +11,15 @@ There are 7 programming projects for CSCI211.
 * [How to turn in your assignment](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Turnin.md "How to Turnin")
 
 * [Tyson's Turnin System](https://turnin.ecst.csuchico.edu/ "Turnin")
+
+##Assignments
+
+|Program | Due Date | Program Name |
+|:-------|----------|:-------------|
+|P1      |          |Chart         |
+|P2      |          |Video Rating System         |
+|P3      |          |Linked List of Videos         |
+|P4      |          |Calculator         |
+|P5      |          |Kwick-E-Mart         |
+|P6      |          |Shapes         |
+|P7      |          |Binary Search Tree         |
