@@ -28,22 +28,22 @@ Implement your stack from scratch using dynamic allocation.  In other words, you
 
 Implement your program using the following class:
 
-class Dstack
+####class Dstack
 
 Stack of doubles that provides at least the following functions:
 
-push          push a new element on top of the stack
-pop           remove and return the top element from the stack
-empty        return true if stack is empty, false otherwise
-~Dstack     a correct destructor
+* push          push a new element on top of the stack
+* pop           remove and return the top element from the stack
+* empty        return true if stack is empty, false otherwise
+* ~Dstack     a correct destructor
 
 You may use whatever return types and arguments you see fit.  You may add additional functions if you need them.
 
 Put main() in the file calc.cpp
 
-The Dstack class may not contain any parts of the calculator program.  It is a stack not a calculator.  Put the parts of the program that have to do with the calculator (including the error message) in calc.cpp.
+**The Dstack class may not contain any parts of the calculator program.  It is a stack not a calculator.**  Put the parts of the program that have to do with the calculator (including the error message) in calc.cpp.
 
-I recommend writing Dstack from scratch.  If you copy code from my on-line list examples (or somewhere else on the web) you won't learn as much as if you write it from scratch.  By the end of 211, you should be able to write linked-list based classes quickly and easily.
+I recommend writing Dstack from scratch.  If you copy code from my on-line list examples (or somewhere else on the web) you won't learn as much as if you write it from scratch.  By the end of 211, you should be able to write linked-list based classes quickly and easily. This is important for when you get to 311 and other courses in the curriculum. Additionally these kind of problems show up often on job interviews. 
 
 
 ###Input:
