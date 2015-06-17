@@ -43,38 +43,48 @@ If these two files match, diff prints nothing.  That means your program produced
 
 The tool vimdiff is an alternative to using diff.  It highlights the differences in red.  You can move around just like in the vim editor.  If you don't know the vim editor, you can exit vimdiff by typing ":qa" then press enter (don't type the quotes).  If you appear to be stuck, try pressing the escape key before the ":qa"
 
+<pre>
 $ vimdiff t01.myout t01.out
-
+</pre>
 
 ##Programs with Input and Output (later assignments in CSCI 111, most assignments in subsequent classes)
 
 Some programs read input and produces output.  The following program reads an integer (from standard input) and writes it to the screen (standard output).
 
+<pre>
 int main()
 {
 int i;
 cin >> i;
 cout << "You entered " << i << endl;
 }
+</pre>
 
 This program can be tested using the same mechanism described above, except now we will redirect standard input (using <) and standard output (using >).  Assume the executable is called num.
 
+<pre>
 $ num < t01.in > t01.myout
+</pre>
 
 Instead of reading from the keyboard, when you call a program using input file redirection (<) the program reads from the given file.  Thus the above command reads from t01.in instead of the keyboard and writes to t01.myout instead of the screen.
 
 You can compare your output (t01.myout) to the correct output (t01.out) using the  Linux diff utility (see above):
 
+<pre>
 $ diff t01.myout t01.out
+</pre>
 
 If these two files match, diff prints nothing.  That means your program produced the correct output (you passed the test).
 
 The tool vimdiff is an alternative to using diff.  It highlights the differences in red.  You can move around just like in the vim editor.  If you don't know the vim editor, you can exit vimdiff by typing ":qa" then press enter (don't type the quotes).  If you appear to be stuck, try pressing the escape key before the ":qa"
 
+<pre>
 $ vimdiff t01.myout t01.out
+</pre>
 
 Since each input is likely to produce different output, your instructor may give you many tests cases (e.g.  t01.in t01.out    t02.in t02.out    t03.in t03.out etc).  You should try them all:
 
+<pre>
 $ num < t02.in > t02.myout
 $ diff t02.out t02.myout
 $ num < t03.in > t03.myout
@@ -82,6 +92,7 @@ $ diff t03.out t03.myout
 $ num < t04.in > t04.myout
 $ diff t04.out t04.myout
 ...
+</pre>
 
 I hope you are thinking about now that there has to be a better way.  After all the Bash Shell is a full programming language, you should not have to type things over and over.
 
@@ -89,12 +100,14 @@ Programs with Input, Output, and Error Output (some assignments in 111, most ass
 
 For most CSCI211 assignments (and most assignments in upper division courses) you are required to write error messages to standard error (using cerr <<  instead of cout << ):
 
+<pre>
 int main()
 {
 .....
 cout << "This is written to standard output\n";
 cerr << "This is an error, it was written to standard error\n";
 }
+</pre>
 
 For assignments that require error messages your instructor will post three files for each test:
 
@@ -104,11 +117,12 @@ correct error output: t01.err
 
 You can test your program as follows (assuming the executable is called calendar)
 
+<pre>
 $ calendar < t01.in > t01.myout 2> t01.myerr
 $ diff t01.myout t01.out
 $ diff t01.myerr t01.err
 $
-
+</pre>
 
 The first line runs the program calendar reading from the file t01 (the "<" redirects the file t01 into standard input), writing standard output to file t01.myout (the ">" redirects the standard output to the file t01.myout), and writing standard error to the file t01.myerr (the "2>" redirects the standard error to the file t01.myerr).  Note: "2>" works for the bash shell, other shells using different syntax; the bash shell is the most common shell.
 
