@@ -32,9 +32,10 @@ See below for installation instructions.  Make sure you follow them exactly or y
 
 ## Option 5: Use a remote terminal program to connect to the Departments computers from home.
 This is not the best option for two reasons
+
 1. Department machines sometimes go down for entire weekends.
 2. You cannot use any graphical programs (such as the Sublime or Atom editor) (actually you can, but it tends to be slow and is hard to setup).
- * Atom has a plugin that allows you to browse/edit SFTP code inside the program. But the other issues w/ this approach still exist. 
+ 1. Atom has a plugin that allows you to browse/edit SFTP code inside the program. But the other issues w/ this approach still exist.
 3. You have to copy to files to your computer before you can turn them in (I recommend using WinsSCP or install Cygwin and use sftp).
 
 Download the program putty
