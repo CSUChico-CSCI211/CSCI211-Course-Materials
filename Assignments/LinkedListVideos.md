@@ -211,7 +211,7 @@ Make sure you save a copy of your completely working program before you start th
 3 points: implement lookup_expression command that takes a [regular expression](http://en.wikipedia.org/wiki/Regular_expression "regular expressions") and prints all the videos that have titles matching the given regular expression.  Use the system functions [regcomp and regex](http://www.ecst.csuchico.edu/%7Etyson/classes/examples/regcomp/) to implement regular expressions.  If the regular expression does not match any titles in the list OR if the regular expression is not a correct regular expression, print the following to standard error (replace XXX with the regular expression):
 
 <pre>
-    Regular expression <XXX> does not match any titles in list.
+    Regular expression &lt;XXX&gt; does not match any titles in list.
 </pre>
 
 If two or more videos match the regular expression, they should be sorted alphabetically.
