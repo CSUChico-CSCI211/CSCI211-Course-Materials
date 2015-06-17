@@ -1,7 +1,8 @@
 #CSCI 211: Programming and Algorithms II
-Program 1: Chart
+##Program 1: Chart
 
-Grading Weight: 1 (programs will have a weight between 1 - 5)
+##Grading Weight:
+1 (programs will have a weight between 1 - 5)
 
 ##Overview:
 

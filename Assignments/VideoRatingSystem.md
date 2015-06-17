@@ -1,7 +1,9 @@
 #CSCI 211: Programming and Algorithms II
-Program 2: Video Rating System
 
-Grading Weight: 2 (programs will have a weight between 1-5)
+##Program 2: Video Rating System
+
+##Grading Weight:
+2 (programs will have a weight between 1-5)
 
 The third programming assignment will use the classes and the input code from this assignment.  If you don't get this assignment working (at least through Step 7) you will have to catch up to finish the next assignment.
 
