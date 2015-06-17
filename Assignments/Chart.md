@@ -51,7 +51,9 @@ The user typed "chart" (the name of the program's executable) at the Linux comma
 
 Then the user typed in the following text:
 
-			<1><space><4><space><2><space><3><space><0><enter>
+<pre>
+<1><space><4><space><2><space><3><space><0><enter>
+</pre>
 
 Note: text between a "<" and a ">" is text that the user types.  Sometimes it is a single key, sometimes it is a string.  "<" and ">" are often used to delineate characters a user types.  In the above string, <1> represents the 1 key, <space> represents the space bar.
 
@@ -63,45 +65,49 @@ Your program must work exactly like this.  It must not print any other character
 
 Note: when you type a command at the Linux prompt, the shell looks for a file with that name in all the directories in your path (a path is a list of directories).  If the current directory (called ".") is in your path, then you can just type "chart".  If it is not in your path, you have to type "./chart"  You can add "." to your path by editing the file in your home directory called .profile and adding the following line.  If you don't have a .profile file, create a new one.  Add the following line to your .profile.
 
+<pre>
 export PATH=.:$PATH
+</pre>
 
 
-
-Testing Your Program:
+##Testing Your Program:
 
 I have posted some sample tests in the src/p1/tests directory (see how to download files to copy my files to your current directory).
 
-The testing instructions contain instructions for testing your program using my sample tests.
+The [testing instructions](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Testing") contain instructions for testing your program using my sample tests.
 
 I will test your program with additional tests not posted in the test directory.  It is a very good idea to design and implement your own set of tests.
 
-Hints:
+##Hints:
 
 Since you will not be given more than 100 integers, create an array of 100 integers.  It is good programming practice to place the "100" in a single place so that it is easy to change:
 
+<pre>
 const int MAX = 100;
 int values[MAX];
 ...
 for (int i = 0; i < MAX; i++)
 {
-...
+	...
 }
-
+</pre>
 
 the above is better than
 
+<pre>
 int values[100];
 ...
 for (int i = 0; i < 100; i++)
 {
-...
+	...
 }
-
+</pre>
 
 You will actually be drawing a rectangular grid with a width equal to the number of bars (values entered) and a height equal to the height of the tallest bar.  At each spot in the grid you must draw a space or an asterisk.
 
 Since you need to know the height of the tallest bar before you start drawing the bars, in my solution there is a function that finds the largest integer in an array of integers.  It looks like this:
 
+<pre>
 // return the largest value in the given array of integers
 int find_largest(int values[], int size)
 {
@@ -109,6 +115,7 @@ int largest = 0;
 // code to actually find the largest goes here
 return largest;
 }
+</pre>
 
 While you don't have to write a find_largest() function, in future assignments you will be writing a lot of functions, so creating a function for this assignment will help prepare you for future assignments.
 
@@ -116,7 +123,7 @@ In C/C++ you can pass an array without specifying the size of the array.  In a c
 
 If you don't finish in time, turn in what you have.  If you turn nothing in I will give you a zero.  If you turn in something I will give you partial credit.  Partial credit is always better than 0.
 
-General Requirements:
+##General Requirements:
 
 I will deduct points if your program contains any tabs or is not well formatted.  See the  211 Programming Assignment Formatting Requirements for details and instructions.
 
@@ -126,29 +133,35 @@ I will grade your program using another program, so if your program does not wor
 
 The first lines of all your files (.h and .cpp) must contain the following comments:
 
-// filename
-// last name, first name
-// ecst_username
+<pre>
+	// filename
+	// last name, first name
+	// ecst_username
+</pre>
 
 For example, my program would have the comments:
-// chart.cpp
-// Henry, Tyson
-// tyson
+<pre>
+	// chart.cpp
+	// Henry, Tyson
+	// tyson
+</pre>
 
-How to turn in code:
+##How to turn in code:
 
 You must turn in the following file:
 
+<pre>
 chart.cpp
+</pre>
 
-See the turn in instructions for details on how to turn in this assignment.
+See the [turn in instructions](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Turnin.md "How to Turnin") for details on how to turn in this assignment.
 
 Assignments can be turned in up to 24 hours late with a 15% penalty.
 
 
-Extra Credit: (10 points)
+##Extra Credit: (10 points)
 
-If you do the extra credit you have to turn in a second chart.cpp (p1 extra on turnin.ecst).  Make sure you do not change/delete your original chart.cpp.
+If you do the extra credit you have to turn in a second chart.cpp (p1 *extra* on turnin.ecst).  Make sure you do not change/delete your original chart.cpp.
 
 No extra credit will be give to late assignments (both the regular assignment and the extra credit must be turned in on time).
 
@@ -156,6 +169,7 @@ In addition to printing the chart pointing "up", also print it pointing down, ri
 
 For example, the input 4 3 2 1 2 3 4 0 will create the following output:
 
+<pre>
 *     *
 **   **
 *** ***
@@ -181,3 +195,4 @@ For example, the input 4 3 2 1 2 3 4 0 will create the following output:
 **
 ***
 ****
+</pre>
