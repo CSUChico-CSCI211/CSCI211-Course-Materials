@@ -27,7 +27,7 @@ For example, if the user entered, 1 2 3 4 3 2 1 10 0, your program must print:
 
 Notes:  there are no spaces before the column of the first bar, and there are no spaces after the column of the last bar.
 
-Program Requirements:
+##Program Requirements:
 
 The input numbers might be on separate lines.  If you read them using "cin >>" you don't have to think about lines, spaces, tabs.
 
@@ -35,17 +35,16 @@ Read up to 100 positive integers (greater than 0) from standard input.  You must
 
 After all these numbers are read (that is, after the user enters a 0), draw the corresponding bar chart.  For example consider the following input/output (I use "$" to represent the Linux command prompt):
 
+<pre>
 $
-
 $ chart
-
 1 4 2 3 0
-*
-* *
-***
+ *
+ * *
+ ***
 ****
 $
-
+</pre>
 
 
 The user typed "chart" (the name of the program's executable) at the Linux command prompt and then pressed enter.
