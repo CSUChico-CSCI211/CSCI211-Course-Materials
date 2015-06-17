@@ -13,15 +13,15 @@ The user specifies a set of up to 100 integers greater than 0.  When the user en
 For example, if the user entered, 1 2 3 4 3 2 1 10 0, your program must print:
 
 <pre>
-		*
-		*
-		*
-		*
-		*
-		*
-	*   *
-	***  *
-	***** *
+	   *
+	   *
+	   *
+	   *
+	   *
+       *
+   *   *
+  ***  *
+ ***** *
 ********
 </pre>
 
