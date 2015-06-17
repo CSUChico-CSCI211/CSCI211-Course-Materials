@@ -65,26 +65,20 @@ Your program must handle the following commands.  The arguments for the command 
 
 The input will not contain any errors other than those listed in this section.  For example, the insert command will always be followed by a title, url, comment, length, rating (each on a separate line).  The program should NOT terminate for the following three errors.
 
-Command
-	Error
-	Error Message (replace XXX with the title entered by user, print the < and >)
-insert
-	Title already in list.
-	Could not insert video <XXX>, already in list.
-lookup
-	Title not in list.
-	Title <XXX> not in list.
-remove
-	Title not in list.
-	Title <XXX> not in list, could not delete.
+|Command|	Error|	Error Message (replace XXX with the title entered by user, print the < and >)|
+|:------|:-----|:---------|
+|insert |Title already in list.|	Could not insert video <XXX>, already in list.|
+|lookup |	Title not in list.|	Title <XXX> not in list.|
+|remove |	Title not in list.| 	Title <XXX> not in list, could not delete.|
 
 If the user enters a command other than (insert, print, length, lookup, remove) print the following error message and terminate the program with an exit status of 1.  Replace the XXX with the command entered (make sure you print < and > in your error message).
 
-<XXX> is not a legal command, giving up.
+<pre>
+    <XXX> is not a legal command, giving up.
+</pre>
 
 
-
-Hints:
+##Hints:
 
     Students often ask me questions that are answered in the handout.  I don't mind, but it is much faster to read the handout then to ask me a question.  It is very helpful to read the entire handout carefully before you start and review it as you program.  I suggest you print out the handout and check off each requirement when you are sure it is correctly implemented.
 
@@ -94,7 +88,7 @@ Hints:
 
     You may start with the posted linked-list example code, HOWEVER on the exam you will need to be able to write some of this code from scratch.  It would be better if you wrote as much as you can from scratch.
 
-    Use static memory in main() to instantiate the Vlist object:  Vlsit videos instead of Vlist *videos = new Vlist()
+    Use static memory in main() to instantiate the Vlist object:  Vlsit videos instead of Vlist \*videos = new Vlist()
 
     lookup and remove take titles as their arguments.  If the command is lookup or remove, use a getline to read the title.
 
