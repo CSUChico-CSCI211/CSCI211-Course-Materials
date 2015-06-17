@@ -93,7 +93,7 @@ If two or more Videos have the same values for the current sorting methods (e.g.
 7. When sorting the videos you need to be able to determine how two video objects should be ordered.  The easiest way to do this is to write member functions to handle the comparisons in class Video.  For example, this function could be used when sorting the videos by length:
 <pre>
     // return true if the current video is longer than the given video (other), return false otherwise
-    bool Video::longer(Video \*other)
+    bool Video::longer(Video *other)
     {
       return m_length > other->m_length;
     }
@@ -142,7 +142,7 @@ Step 6: Implement the Video class.  Include a constructor and a print function.
 Step 7: After you read each description, create a new Video object (using the new operator).  Call the print function for that new object.  Make sure the output is in the correct format so you don't have to worry about the print format anymore.
 <pre>
     // Create the new Video object
-    Video \*temp_video_pointer = new Video( -- the variables that hold the values you just read in go here -- );
+    Video *temp_video_pointer = new Video( -- the variables that hold the values you just read in go here -- );
 
     // tell the new Video object to print itself
     temp_video_pointer->print();
