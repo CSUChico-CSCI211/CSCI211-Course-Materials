@@ -3,7 +3,7 @@
 ##Grading Weight:
 3 (programs will have a weight between 1 - 5)
 
-Creating the stack for this assignment is a lab exercise.  Follow the instructions in lab 7 when creating and testing your stack.
+**Creating the stack for this assignment is a lab exercise.  Follow the instructions in lab 7 when creating and testing your stack.**
 
 
 ##Overview:
@@ -43,7 +43,7 @@ Put main() in the file calc.cpp
 
 **The Dstack class may not contain any parts of the calculator program.  It is a stack not a calculator.**  Put the parts of the program that have to do with the calculator (including the error message) in calc.cpp.
 
-I recommend writing Dstack from scratch.  If you copy code from my on-line list examples (or somewhere else on the web) you won't learn as much as if you write it from scratch.  By the end of 211, you should be able to write linked-list based classes quickly and easily. This is important for when you get to 311 and other courses in the curriculum. Additionally these kind of problems show up often on job interviews. 
+I recommend writing Dstack from scratch.  If you copy code from my on-line list examples (or somewhere else on the web) you won't learn as much as if you write it from scratch.  By the end of 211, you should be able to write linked-list based classes quickly and easily. This is important for when you get to 311 and other courses in the curriculum. Additionally these kind of problems show up often on job interviews.
 
 
 ###Input:
