@@ -9,38 +9,35 @@ For each assignment, one or more tests will be posted on the class web pages.  F
 
 The simplest programs read no input and produce output:
 
-<code>
+<pre>
 int main()
 {
-
 cout << "Hello world!" << endl;
-
 }
-</code>
+</pre>
 
 In order to make sure such a program is correct, the text written to standard output ("Hello world!") needs to be compared to a correct solution.  For assignments that read no input, you will be given a single correct output file.  In the following example, that file is called "t01.out" and the executable is called hello (an executable is a compiled program):
 
-<code>
+<pre>
 $ hello > t01.myout
-</code>
+</pre>
+
 Note: if you get a message that hello cannot be found, you might have a problem with your path, try $ ./hello > t01.myout
 
 The > takes what your program wrote to the screen (known as standard output) and redirects it to a file (t01.myout in the above example).  You can view the contents of t01.myout using an editor or the Linux cat utility:
 
-<code>
+<pre>
 $ cat t01.myout
-
 Hello world!
-
 $
-</code>
+</pre>
 
 You can compare your output (t01.myout) to the correct output (t01.out) using the  Linux diff utility:
 
-<code>
+<pre>
 $ diff t01.myout t01.out
 $
-</code>
+</pre>
 
 If these two files match, diff prints nothing.  That means your program produced the correct output (you passed the test).
 
