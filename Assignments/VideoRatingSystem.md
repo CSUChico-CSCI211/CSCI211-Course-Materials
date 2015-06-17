@@ -117,7 +117,6 @@ If two or more Videos have the same values for the current sorting methods (e.g.
            swap(videos[cur], videos[cur+1]);  // since videos is an array of pointers you can simply swap the addresses at the cur and cur+1 locations.
 
 </pre>
-
 10. Start today.
 
 
