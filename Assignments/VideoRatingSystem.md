@@ -28,51 +28,56 @@ Use an array of pointers to videos (Video \*) to store the videos.  Use dynamic 
 
 The first thing in the input must be the sorting criteria (on its own line).  The valid strings are "rating", "length", and "title."
 
-rating:  sort the output so the highest ratings come first.
-length: sort the output so the shortest videos come first.
-title: sort the output so the videos titles are in alphabetical order.
+  * **rating**:  sort the output so the highest ratings come first.
+  * **length**: sort the output so the shortest videos come first.
+  * **title**: sort the output so the videos titles are in alphabetical order.
 
 If the first line is not one of the above strings, print the message "XXX is not a legal sorting method, giving up." (where XXX is the first string in the input; the illegal sorting method) and a newline (endl) to standard error (using cerr) and terminate the program.
 
 After the sorting method string (rating, length, title), the input will contain only valid video descriptions (you do not have to worry about errors in the descriptions).  Each description will be formatted as follows:
 
-first line: the title of the video (may contain spaces)
-second line: the URL of the video (may contain spaces)
-third line: a comment (may contain spaces)
-fourth line:  a floating point number that is the length of the video
-fifth line: an integer from 1 to 5 that is the rating of the video
+<pre>
+    first line: the title of the video (may contain spaces)
+    second line: the URL of the video (may contain spaces)
+    third line: a comment (may contain spaces)
+    fourth line:  a floating point number that is the length of the video
+    fifth line: an integer from 1 to 5 that is the rating of the video
+</pre>
 
 Each field of the video description will be on its own line.  The title, URL, and comment are strings.  The length is a floating point number.  The rating is an integer (it will always be in the range of 1-5).  The following is valid input.  Remember that the first line is the sorting method.
 
-rating
-United Break Guitars
-http://www.youtube.com/watch?v=5YGc4zOqozo
-Great example of one person getting a giant company to listen
-4.5
-4
-Funny Cats
-http://www.youtube.com/watch?v=nTasT5h0LEg
-Why are there so many cat videos on youtube?
-2.75
-1
-It's Not About the Nail
-https://www.youtube.com/watch?v=-4EDhdAHrOg
-Favorite web video
-1.68
-5
-Pet Interviews - Guinea Pig
-https://www.youtube.com/watch?v=jW3XtKBlTz0
-Best guinea pig interview
-1.75
-4
-
+<pre>
+    rating
+    United Break Guitars
+    http://www.youtube.com/watch?v=5YGc4zOqozo
+    Great example of one person getting a giant company to listen
+    4.5
+    4
+    Funny Cats
+    http://www.youtube.com/watch?v=nTasT5h0LEg
+    Why are there so many cat videos on youtube?
+    2.75
+    1
+    It's Not About the Nail
+    https://www.youtube.com/watch?v=-4EDhdAHrOg
+    Favorite web video
+    1.68
+    5
+    Pet Interviews - Guinea Pig
+    https://www.youtube.com/watch?v=jW3XtKBlTz0
+    Best guinea pig interview
+    1.75
+    4
+</pre>
 
 The following is the correct output for the above input (sorted by rating as specified in the above input).
 
-It's Not About the Nail, https://www.youtube.com/watch?v=-4EDhdAHrOg, Favorite web video, 1.68, *****
-United Break Guitars, http://www.youtube.com/watch?v=5YGc4zOqozo, Great example of one person getting a giant company to listen, 4.5, ****
-Pet Interviews - Guinea Pig, https://www.youtube.com/watch?v=jW3XtKBlTz0, Best guinea pig interview, 1.75, ****
-Funny Cats, http://www.youtube.com/watch?v=nTasT5h0LEg, Why are there so many cat videos on youtube?, 2.75, *
+<pre>
+    It's Not About the Nail, https://www.youtube.com/watch?v=-4EDhdAHrOg, Favorite web video, 1.68, *****
+    United Break Guitars, http://www.youtube.com/watch?v=5YGc4zOqozo, Great example of one person getting a giant company to listen, 4.5, ****
+    Pet Interviews - Guinea Pig, https://www.youtube.com/watch?v=jW3XtKBlTz0, Best guinea pig interview, 1.75, ****
+    Funny Cats, http://www.youtube.com/watch?v=nTasT5h0LEg, Why are there so many cat videos on youtube?, 2.75, *
+</pre>
 
 If two or more Videos have the same values for the current sorting methods (e.g. you are sorting by length and two or more videos have the same length), these videos should be sorted in the same order as the input.  For example, in the above sample input if both Dog Playing Piano and Cupcake eating challenge had the same rating,  Dog Playing Piano would be first because it is first in the input.
 
