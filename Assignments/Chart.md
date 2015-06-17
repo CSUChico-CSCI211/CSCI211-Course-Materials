@@ -51,9 +51,7 @@ The user typed "chart" (the name of the program's executable) at the Linux comma
 
 Then the user typed in the following text:
 
-<pre>
-<1><space><4><space><2><space><3><space><0><enter>
-</pre>
+		<1><space><4><space><2><space><3><space><0><enter>
 
 Note: text between a "<" and a ">" is text that the user types.  Sometimes it is a single key, sometimes it is a string.  "<" and ">" are often used to delineate characters a user types.  In the above string, <1> represents the 1 key, <space> represents the space bar.
 
