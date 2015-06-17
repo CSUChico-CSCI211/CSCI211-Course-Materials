@@ -132,7 +132,7 @@ If the user enters a command other than (insert, print, length, lookup, remove) 
   11. When you make a mistake with a pointer, your program usually terminates with a Segmentation Fault.  It can take a lot of time to track down these problems.  Even if you did p2 at the last minute, it is a good idea to start p3 early.
 
 
-Plan of Attack:
+##Plan of Attack:
 
 Step 1: Copy p2's main.cpp video.h video.cpp to your p3 directory (do not use the same directory for both assignments).
 
@@ -150,10 +150,12 @@ Step 7: Write the Vlist print function.  This function calls Video::print() on a
 
 Step 8: Implement the insert and print commands in main().  Once they are implemented you will be able to insert any number of videos into the list and print the entire list out.  However, the order will not be correct yet because you have a place holder for the insert function.  As an example of how to implement the commands, below is my implementation of the print command.  I called my Vlist object vlist.
 
+<pre>
 if (command == "print")
 {
     vlist.print();
 }
+</pre>
 
 Step 9: Once you are certain that the print and insert commands work, you can update the insert function to insert the video so the list is ordered correctly (alphabetically by title).  Test your new insert function.  If it is correct your program should pass all tests that only use the insert and print commands.  If you don't pass these tests, fix the problem before you move on.
 
@@ -165,7 +167,7 @@ Step 12:  Read the requirements carefully to make sure your program is complete.
 
 
 
-General Requirements:
+##General Requirements:
 
 Make sure your program is well formatted and uses spaces to indent instead of tabs.  See the Formatting Requirements page.
 
@@ -176,7 +178,7 @@ The first lines of all your files (.h and .cpp) must contain the following comme
 // ecst_username
 
 
-Testing:
+##Testing:
 
 Sample tests are posted in the src/p3/tests directory.
 
@@ -185,19 +187,19 @@ See Introduction to How to Test for instructions on how to test this program.
 If you want to save yourself some time typing, read how to use my automatic testing script.
 
 
-Submitting:
+##Submitting:
 
 You MUST turn in your assignment several times (at least three) during development.  Only the last submission has to compile and run and only the last submission will be graded.  The submissions should show your progress (e.g. the first submission has a little bit of the program working, the second a little more, etc).  When I suspect cheating I will look at these early submissions for a clear development trend; I want to prevent students from copying finished programs from another student and then turning them in.
 
 Turn in the following files using https://turnin.ecst.csuchico.edu.
 
-video.h
-video.cpp
-vlist.h
-vlist.cpp
-main.cpp
+* video.h
+* video.cpp
+* vlist.h
+* vlist.cpp
+* main.cpp
 
-Extra Credit:
+##Extra Credit:
 
 No extra credit will be give to late assignments (both the regular assignment and the extra credit must be turned in on time).
 
@@ -207,10 +209,12 @@ Make sure you save a copy of your completely working program before you start th
 
 3 points: implement the print_by_rating command that prints all the videos in the list ordered by rating (highest to lowest). If two or more videos have the same rating they should be sorted alphabetically.
 
-3 points: implement lookup_expression command that takes a regular expression and prints all the videos that have titles matching the given regular expression.  Use the system functions regcomp and regex to implement regular expressions.  If the regular expression does not match any titles in the list OR if the regular expression is not a correct regular expression, print the following to standard error (replace XXX with the regular expression):
+3 points: implement lookup_expression command that takes a [regular expression](http://en.wikipedia.org/wiki/Regular_expression "regular expressions") and prints all the videos that have titles matching the given regular expression.  Use the system functions [regcomp and regex](http://www.ecst.csuchico.edu/%7Etyson/classes/examples/regcomp/) to implement regular expressions.  If the regular expression does not match any titles in the list OR if the regular expression is not a correct regular expression, print the following to standard error (replace XXX with the regular expression):
 
-Regular expression <XXX> does not match any titles in list.
+<pre>
+    Regular expression <XXX> does not match any titles in list.
+</pre>
 
 If two or more videos match the regular expression, they should be sorted alphabetically.
 
-If you do the extra credit,  add it to your base assignment and turn it in as BOTH "p3 video list" and "p3 extra credit" (you can use the same files for both submissions).
+If you do the extra credit,  add it to your base assignment and turn it in as **BOTH** "p3 video list" and "p3 extra credit" (you can use the same files for both submissions).
