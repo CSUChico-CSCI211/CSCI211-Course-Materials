@@ -8,43 +8,45 @@ Creating the stack for this assignment is a lab exercise.  Follow the instructio
 
 ##Overview:
 
-    The standard form of equations, 2 + 4, is called infix because the operator (+ in this example) is "in" the middle of the operands (2 and 4 in this example).  This form has the drawback of not being able to control the order in which the operators are applied without using parentheses.  For example, if you want 2 + 4 multiplied by 5, you have to write (2+4)\*5.  While this is easy to do in a programming language, it is difficult to do on a standard calculator.
+The standard form of equations, 2 + 4, is called infix because the operator (+ in this example) is "in" the middle of the operands (2 and 4 in this example).  This form has the drawback of not being able to control the order in which the operators are applied without using parentheses.  For example, if you want 2 + 4 multiplied by 5, you have to write (2+4)\*5.  While this is easy to do in a programming language, it is difficult to do on a standard calculator.
 
-    Postfix notation (also called Reverse Polish Notation or RPN) is much better suited for calculators.  In postfix notation, the operator goes after the operand.  For example, the equation 2 4 + means 2 plus 4, and the expression 2 4 + 5 * means to first apply + to 2 and 4 and then apply * to the result of 2 + 4 and 5.  The result is (2 + 4) * 5 and you didn't have to type in the "(" and ")".
 
-    Postfix calculators are easily implemented using a stack data structure.  When the user enters an operand, it is inserted on to the stack (in stacks, inserting on top of the stack is called push).  When the user enters a binary operator, the 2 operands on top of the stack are removed (popped), the operator is applied to them, and the result is pushed on to the stack.
+Postfix notation (also called Reverse Polish Notation or RPN) is much better suited for calculators.  In postfix notation, the operator goes after the operand.  For example, the equation 2 4 + means 2 plus 4, and the expression 2 4 + 5 * means to first apply + to 2 and 4 and then apply * to the result of 2 + 4 and 5.  The result is (2 + 4) * 5 and you didn't have to type in the "(" and ")".
 
-    If at the end of the input, there is one and only one operand on the stack, then the input was a valid expression and the value on the stack is the result of evaluating that expression.
 
-    This assignment is to implement an RPN calculator that can evaluate any legal expression and catch all illegal input (except numbers with so many digits that they won't fit into a double).  As soon as illegal input is encountered, print the error message (see below) and call exit(1).
+Postfix calculators are easily implemented using a stack data structure.  When the user enters an operand, it is inserted on to the stack (in stacks, inserting on top of the stack is called push).  When the user enters a binary operator, the 2 operands on top of the stack are removed (popped), the operator is applied to them, and the result is pushed on to the stack.
 
-Program Requirements:
+If at the end of the input, there is one and only one operand on the stack, then the input was a valid expression and the value on the stack is the result of evaluating that expression.
 
-Implementation:
+This assignment is to implement an RPN calculator that can evaluate any legal expression and catch all illegal input (except numbers with so many digits that they won't fit into a double).  As soon as illegal input is encountered, print the error message (see below) and call exit(1).
 
-    Implement your stack from scratch using dynamic allocation.  In other words, your stack must look like a linked-list.  You may not use a stack from a library.  Create a class Node to hold the elements of the stack.  The Node class must be nested inside the stack class.
+##Program Requirements:
 
-    Implement your program using the following class:
+###Implementation:
+
+Implement your stack from scratch using dynamic allocation.  In other words, your stack must look like a linked-list.  You may not use a stack from a library.  Create a class Node to hold the elements of the stack.  The Node class must be nested inside the stack class.
+
+Implement your program using the following class:
 
 class Dstack
 
-    Stack of doubles that provides at least the following functions:
+Stack of doubles that provides at least the following functions:
 
-    push          push a new element on top of the stack
-    pop           remove and return the top element from the stack
-    empty        return true if stack is empty, false otherwise
-    ~Dstack     a correct destructor
+push          push a new element on top of the stack
+pop           remove and return the top element from the stack
+empty        return true if stack is empty, false otherwise
+~Dstack     a correct destructor
 
-    You may use whatever return types and arguments you see fit.  You may add additional functions if you need them.
+You may use whatever return types and arguments you see fit.  You may add additional functions if you need them.
 
-    Put main() in the file calc.cpp
+Put main() in the file calc.cpp
 
-    The Dstack class may not contain any parts of the calculator program.  It is a stack not a calculator.  Put the parts of the program that have to do with the calculator (including the error message) in calc.cpp.
+The Dstack class may not contain any parts of the calculator program.  It is a stack not a calculator.  Put the parts of the program that have to do with the calculator (including the error message) in calc.cpp.
 
-    I recommend writing Dstack from scratch.  If you copy code from my on-line list examples (or somewhere else on the web) you won't learn as much as if you write it from scratch.  By the end of 211, you should be able to write linked-list based classes quickly and easily.
+I recommend writing Dstack from scratch.  If you copy code from my on-line list examples (or somewhere else on the web) you won't learn as much as if you write it from scratch.  By the end of 211, you should be able to write linked-list based classes quickly and easily.
 
 
-Input:
+###Input:
 
     Your program must read a single equation from standard input. The operators are + - * / ^ (^ is power, 2 4 ^ is 2 raised to the power of 4).  Numbers can be any double number, for example 4, 4.2, .2, 0.2, 0000.233.  You can assume that the number is small enough to fit into a double variable (I won't give you a number with 200 digits).
 
