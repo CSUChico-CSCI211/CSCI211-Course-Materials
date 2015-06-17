@@ -121,7 +121,7 @@ If two or more Videos have the same values for the current sorting methods (e.g.
 
 
 
-Plan of Attack:
+##Plan of Attack:
 
 Step 1: Create video.h and put an empty class definition and the #ifndef/#endif construct.  You may start with the object_start_here to start your .h file (see How to Download Files).
 
@@ -131,37 +131,41 @@ Step 3: Create main.cpp and write an empty main() (a main function that does not
 
 Step 4: Using the Makefile in your p2 directory (downloaded in Lab 1), compile the assignment using the make utility.  If you names the files as specified above, double check that you include only .h files (never include a .cpp file), and copy my Makefile to your current directory, you can compile your program simply by typing "make" at the command prompt:
 
+<pre>
 $ make
+</pre>
 
 Step 5: Once the "empty" files compile, write the code in main() to read the input (the sorting method string and the video descriptions).  Write the data to standard output to make sure you are reading it correctly.  Make sure you continue reading video descriptions until the end of input.
 
 Step 6: Implement the Video class.  Include a constructor and a print function.
 
 Step 7: After you read each description, create a new Video object (using the new operator).  Call the print function for that new object.  Make sure the output is in the correct format so you don't have to worry about the print format anymore.
+<pre>
+    // Create the new Video object
+    Video \*temp_video_pointer = new Video( -- the variables that hold the values you just read in go here -- );
 
-// Create the new Video object
-Video *temp_video_pointer = new Video( -- the variables that hold the values you just read in go here -- );
-
-// tell the new Video object to print itself
-temp_video_pointer->print();
+    // tell the new Video object to print itself
+    temp_video_pointer->print();
+</pre>
 
 Step 8: Use the array of 100 pointers to Video objects to hold the videos (instead of the temp_video_pointer above).  Instead of printing after each on you read, print all the Videos in the array after you are done reading all the input.  The output of your program should be complete except for the order of the videos.  Make sure everything is working before you move on.
 
 Step 9: Implement the sorting of the videos.  Do not start this step until you have tested your program and are sure all the other components are working.
 
 
-General Requirements:
+##General Requirements:
 
 Programs should be well formatted so they are easy to read and uniform. Avoid using tabs in your programs. Code must be correctly indented, but you should use spaces for indenting, not tabs. See the Formatting Requirements page.
 
 The first lines of all your files (.h and .cpp) must contain the following comments:
 
-// filename
-// last name, first name
-// ecst_username
+<pre>
+  // filename
+  // last name, first name
+  // ecst_username
+</pre>
 
-
-Testing:
+##Testing:
 
 Sample tests are posted in the src/p2/tests directory. These tests are included in the 211.tar file downloaded in the first lab.
 
@@ -172,12 +176,12 @@ See Introduction to Testing for instructions on how to test this program.
 If you want to save yourself some time typing, read how to use my automatic testing script.
 
 
-Submitting:
+##Submitting:
 
 You MUST turn in your assignment several times (at least three) during development.  Only the last submission has to compile and run and only the last submission will be graded.  The submissions should show your progress (e.g. the first submission has a little bit of the program working, the second a little more, etc).  When I suspect cheating I will look at these early submissions for a clear development trend; I want to prevent students from copying finished programs from another student and then turning them in.
 
 Turn in the following files using https://turnin.ecst.csuchico.edu.
 
-video.h
-video.cpp
-main.cpp
+* video.h
+* video.cpp
+* main.cpp
