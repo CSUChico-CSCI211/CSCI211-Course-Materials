@@ -91,7 +91,6 @@ If two or more Videos have the same values for the current sorting methods (e.g.
 6. After you read the rating (which is the last element of the description) there will be an extra line feed that you need to get rid of before you can read the next description (getline will read an empty line if you don't get rid of the newline).  Use the following statement to get rid of that line feed:  cin.ignore();
 
 7. When sorting the videos you need to be able to determine how two video objects should be ordered.  The easiest way to do this is to write member functions to handle the comparisons in class Video.  For example, this function could be used when sorting the videos by length:
-
 <pre>
     // return true if the current video is longer than the given video (other), return false otherwise
     bool Video::longer(Video \*other)
@@ -101,7 +100,6 @@ If two or more Videos have the same values for the current sorting methods (e.g.
 </pre>
 
 8. You will need to compare strings alphabetically when sorting by title.  If you use C++ style strings (as suggested above) you can compare them using the normal comparison operators:
-
 <pre>
     string str1 = "hello";
     string str2 = "goodbye";
@@ -112,7 +110,6 @@ If two or more Videos have the same values for the current sorting methods (e.g.
 </pre>
 
 9. Use the bubble sort algorithm (look at the animation on this page to see how it works) to sort the videos.  The following code uses the Video::longer() function above and sorts the array by video length:
-
 <pre>
     for (int last = num_videos -1; last > 0; last--)
        for (int cur = 0; cur < last; cur++)
