@@ -2,11 +2,11 @@
 
 There are five options for implementing your assignments:
 
-* Option 1: Install Linux on your computer
+## Option 1: Install Linux on your computer
 Installing Linux on your own computer is the best option.  I expect all CSCI & CINS majors to be able to install Linux. Linux is very easy to install.  I recommend using the Xubuntu distribution.  It is based on the ubuntu distribution (ubuntu has a great software installer). See below for installation instructions. This is also the version/desktop environment you will see in the labs.
 
 
-* Option 2: Use a Macintosh
+## Option 2: Use a Macintosh
 The Mac operating system is very similar to Linux.  However, Apple recently removed all the GNU software from their Xcode development package.
 
 You will need to use the Homebrew package manager to install the GNU software we need:  g++ compiler, gnu's make utility, gdb, and ddd
@@ -15,7 +15,7 @@ I feel the easier option is to use option 3 and just installing a Linux VM and u
 
 You will also need an editor. I recommend Sublime or Atom.
 
-* Option 3: Use a Virtual Machine
+## Option 3: Use a Virtual Machine
 Install a program on your Window or Apple computer that will allow you to install and run Linux as a program on your native OS.
 
 I recommend using VMware. We have a site licence that allows you to download and install a professional version.
@@ -23,14 +23,14 @@ I recommend using VMware. We have a site licence that allows you to download and
 Log into accounts.ecst.csuchico.edu and select Request/Renew MSDN Academic Alliance/VMWare access. Once you request access to MSDN/VMware, you will receive an email (on your @mail.csuchico.edu account) with instructions on how to log in and download software. The email usually arrive the next business day. You will be able to download many Microsoft products (include the OS) and VMware. I
 
 
-* Option 4: Install the UNIX/Linux emulator Cygwin on your windows machine.
+## Option 4: Install the UNIX/Linux emulator Cygwin on your windows machine.
 Cygwin allows you to open a command shell window on your windows machine.
 It provides all the commands you need to do the class projects.
 It takes about 30 minutes to install.
 See below for installation instructions.  Make sure you follow them exactly or you may miss something.
 
 
-* Option 5: Use a remote terminal program to connect to the Departments computers from home.
+## Option 5: Use a remote terminal program to connect to the Departments computers from home.
 This is not the best option for two reasons
 1. Department machines sometimes go down for entire weekends.
 2. You cannot use any graphical programs (such as the scite editor) (actually you can, but it tends to be slow and is hard to setup).
@@ -110,6 +110,7 @@ If you choose to use windows without installing a virtual Linux, you will need t
 
 Here are the steps for installing Cygwin on your windows machine
 
+<pre>
     Using windows explorer create a directory c:\cygwin
     Go to http://www.cygwin.com and download setup-x86.exe for 32bit and setup-x86_64.exe for 64 bit (from the install page), and copy it to c:\cygwin
     Run c:\setup-x86_64.exe      -or -  c:\setup-x86.exe
@@ -144,10 +145,11 @@ Here are the steps for installing Cygwin on your windows machine
     if asked if you want to include additional libraries that are required, answer yes
     wait for cygwin to download (this can take 10-30 minutes depending on your internet connection and the speed of the download site you are using)
     Leave the "create icon on desktop" and "add icon to start menu" boxes checked and press finish.
-
+</pre>
 
 Now you are ready to use Cygwin.  If the following tasks work, you probably have Cygwin installed correctly:
 
+<pre>
     Open a Cygwin window by clicking on the Cygwin icon.  It should be a window with a black background and the prompt will probably be a $, but might be something else
     Type pwd <enter>  (<enter> means to press the enter key).  This is the directory that cygwin has set up as your home directory.
     Create a test C++ program or download a test C++ file from my website.  In the following, replace the USERNAME with your ecst username
@@ -162,6 +164,7 @@ Now you are ready to use Cygwin.  If the following tasks work, you probably have
         $ g++ hello.cpp
         $ a.exe
     If you see "Hello world." on the screen your install is correct.
+</pre>
 
 If the program does not run (the bash shell will tell you that it could not find a.exe) then try the following:
 
