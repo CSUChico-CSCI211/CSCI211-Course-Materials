@@ -80,56 +80,56 @@ If the user enters a command other than (insert, print, length, lookup, remove) 
 
 ##Hints:
 
-    Students often ask me questions that are answered in the handout.  I don't mind, but it is much faster to read the handout then to ask me a question.  It is very helpful to read the entire handout carefully before you start and review it as you program.  I suggest you print out the handout and check off each requirement when you are sure it is correctly implemented.
+  1. Students often ask me questions that are answered in the handout.  I don't mind, but it is much faster to read the handout then to ask me a question.  It is very helpful to read the entire handout carefully before you start and review it as you program.  I suggest you print out the handout and check off each requirement when you are sure it is correctly implemented.
 
-    Program incrementally.  Get small parts working before you move on.  The next section describes how to break the program into pieces.
+  2. Program incrementally.  Get small parts working before you move on.  The next section describes how to break the program into pieces.
 
-    The linked list examples from class are all linked lists of integers.  That means the Nodes contain an integer.  For this assignment, the list is a list pointers to Video objects, that means the Node will contains a Video * instead of the integer in the class examples.
+  3. The linked list examples from class are all linked lists of integers.  That means the Nodes contain an integer.  For this assignment, the list is a list pointers to Video objects, that means the Node will contains a Video * instead of the integer in the class examples.
 
-    You may start with the posted linked-list example code, HOWEVER on the exam you will need to be able to write some of this code from scratch.  It would be better if you wrote as much as you can from scratch.
+  4. You may start with the posted linked-list example code, HOWEVER on the exam you will need to be able to write some of this code from scratch.  It would be better if you wrote as much as you can from scratch.
 
-    Use static memory in main() to instantiate the Vlist object:  Vlsit videos instead of Vlist \*videos = new Vlist()
+  5. Use static memory in main() to instantiate the Vlist object:  *Vlsit videos* instead of *Vlist \*videos = new Vlist()*
 
-    lookup and remove take titles as their arguments.  If the command is lookup or remove, use a getline to read the title.
+  6. *lookup* and *remove* take titles as their arguments.  If the command is lookup or remove, use a getline to read the title.
 
-    Use getline() to read all the commands.  getline() will automatically throw away the newline character at the end of the line.
+  7. Use getline() to read all the commands.  getline() will automatically throw away the newline character at the end of the line.
+  <pre>
 
     while (getline(cin, command)) {
-    // have just read a new command
-    if (command == "insert")
-    {
-    // read the insert arguments (title, url, comment, length, title)
-    //...
-    cin >> rating;
-    // since cin >> rating does not throw away the newline, you need to explicitly ignore it
-    cin.ignore();
+      // have just read a new command
+      if (command == "insert")
+      {
+        // read the insert arguments (title, url, comment, length, title)
+        //...
+        cin >> rating;
+        // since cin >> rating does not throw away the newline, you need to explicitly ignore it
+        cin.ignore();
+      }
+      else if (command == "remove")
+      {
+        getline(cin, title)
+        // don't have to worry about the newline because getline threw it away
+
+      }
+      ...
     }
-    else if (command == "remove")
-    {
-    getline(cin, title)
-    // don't have to worry about the newline because getline threw it away
+<pre>
+  8. When reading a video, use the same approach you used in p2.  Except the getline for the title will no longer be in the while statement (the reading of the command will be in a while statement).
 
-    }
-    ...
-    }
-
-
-    When reading a video, use the same approach you used in p2.  Except the getline for the title will no longer be in the while statement (the reading of the command will be in a while statement).
-
-    Since you will be printing error messages in main(), several of the Vlist functions will have to return the status of the function. For example:
-
+  9. Since you will be printing error messages in main(), several of the Vlist functions will have to return the status of the function. For example:
+  <pre>
     bool Vlist::remove(string title)
     {
     if the title is in the list and was removed
     return true
     else return false
     }
-
+  </pre>
     In main() the value returned by remove can be used to determine if an error message should be printed. Print all error messages from main().
 
-    Use asserts to document what you think should be true or false.
+  10. Use asserts to document what you think should be true or false.
 
-    When you make a mistake with a pointer, your program usually terminates with a Segmentation Fault.  It can take a lot of time to track down these problems.  Even if you did p2 at the last minute, it is a good idea to start p3 early.
+  11. When you make a mistake with a pointer, your program usually terminates with a Segmentation Fault.  It can take a lot of time to track down these problems.  Even if you did p2 at the last minute, it is a good idea to start p3 early.
 
 
 Plan of Attack:
