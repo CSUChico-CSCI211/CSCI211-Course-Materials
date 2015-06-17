@@ -94,26 +94,24 @@ If the user enters a command other than (insert, print, length, lookup, remove) 
 
   7. Use getline() to read all the commands.  getline() will automatically throw away the newline character at the end of the line.
   <pre>
-
-    while (getline(cin, command)) {
-      // have just read a new command
-      if (command == "insert")
-      {
-        // read the insert arguments (title, url, comment, length, title)
-        //...
-        cin >> rating;
-        // since cin >> rating does not throw away the newline, you need to explicitly ignore it
-        cin.ignore();
-      }
-      else if (command == "remove")
-      {
-        getline(cin, title)
-        // don't have to worry about the newline because getline threw it away
-
-      }
-      ...
+  while (getline(cin, command)) {
+    // have just read a new command
+    if (command == "insert")
+    {
+      // read the insert arguments (title, url, comment, length, title)
+      //...
+      cin >> rating;
+      // since cin >> rating does not throw away the newline, you need to explicitly ignore it
+      cin.ignore();
     }
-<pre>
+    else if (command == "remove")
+    {
+      getline(cin, title)
+      // don't have to worry about the newline because getline threw it away
+    }
+    ...
+  }
+  </pre>
   8. When reading a video, use the same approach you used in p2.  Except the getline for the title will no longer be in the while statement (the reading of the command will be in a while statement).
 
   9. Since you will be printing error messages in main(), several of the Vlist functions will have to return the status of the function. For example:
