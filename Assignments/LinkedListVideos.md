@@ -74,7 +74,7 @@ The input will not contain any errors other than those listed in this section.  
 If the user enters a command other than (insert, print, length, lookup, remove) print the following error message and terminate the program with an exit status of 1.  Replace the XXX with the command entered (make sure you print < and > in your error message).
 
 <pre>
-    \<XXX\> is not a legal command, giving up.
+    &lt;XXX&gt; is not a legal command, giving up.
 </pre>
 
 
