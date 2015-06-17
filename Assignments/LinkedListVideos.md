@@ -173,10 +173,11 @@ Make sure your program is well formatted and uses spaces to indent instead of ta
 
 The first lines of all your files (.h and .cpp) must contain the following comments:
 
+<pre>
 // filename
 // last name, first name
 // ecst_username
-
+</pre>
 
 ##Testing:
 
