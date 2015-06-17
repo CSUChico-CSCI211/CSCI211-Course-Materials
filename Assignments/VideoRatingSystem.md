@@ -116,7 +116,7 @@ If two or more Videos have the same values for the current sorting methods (e.g.
     }
 </pre>
 
-9. Use the bubble sort algorithm (look at the animation on this page to see how it works) to sort the videos.  The following code uses the Video::longer() function above and sorts the array by video length:
+9. Use the [bubble sort algorithm (look at the animation on this page to see how it works)](http://en.wikipedia.org/wiki/Bubble_sort "wikipedia bubble sort") to sort the videos.  The following code uses the Video::longer() function above and sorts the array by video length:
 <pre>
     for (int last = num_videos -1; last > 0; last--)
        for (int cur = 0; cur < last; cur++)
