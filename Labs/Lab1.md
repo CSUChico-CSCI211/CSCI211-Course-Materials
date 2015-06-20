@@ -109,32 +109,40 @@ You can tell the shell to redirect standard input (i.e. cin) from a file
 
 Now when the program add is run, text read from standard input (cin) will be read from the file: test_1.in
 
-Linux Pipes
+####Linux Pipes
 
 One of the most powerful features of the bash shell is the ability to connect the output of one command to the input of another command.  Consider these two commands:
 
+<pre>
 	$ ls    this will list all the files in the current directory
 	$ wc    this will count all the characters, words, and lines in the input
+</pre>
 
 If we take the output of ls and connected it to the input of wc (we say "pipe the output of ls to the input of wc") we can find out how many files are in the current directory
 
+<pre>
 	$ ls | wc
+</pre>
 
 The | is usually on the key above the Enter key.
 
 Any number of commands can be pipped together.
 
-Common Linux commands
+####Common Linux commands
 
-cd
-	change directory
-		~ is used to mean your home directory
-		.. is used to mean the parent of current directory
+<| Linux Command     | Command Details     | Examples |
+| :------------- | :------------- | :-------- |
+| cd       | change directory
+	~ is used to mean your home directory
+	.. is used to mean the parent of current directory       |$ cd                 change to your home directory
+	$ cd  ~user      change to specified user's home directory   (e.g.   $ cd ~tyson)
+	$ cd  ..             change to the parent of the current directory (the directory above the current directory)
+	$ cd  211         if "211" is a sub-directory of the current directory, change to it|
 
-$ cd                 change to your home directory
-$ cd  ~user      change to specified user's home directory   (e.g.   $ cd ~tyson)
-$ cd  ..             change to the parent of the current directory (the directory above the current directory)
-$ cd  211         if "211" is a sub-directory of the current directory, change to it
+
+
+
+
 
 ls
 	list the files in the current directory
