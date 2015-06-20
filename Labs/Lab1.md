@@ -136,28 +136,10 @@ Any number of commands can be pipped together.
 |ls | list the files in the current directory | |
 |pwd |	show the current directory (called the path)| |
 |mkdir | make a new directory|$ mkdir 211     <br>       make a new directory in the current directory called "211" <br>$ mkdir ~/211   <br>      make a new directory in your home directory called "211" |
-|chmod | change the protection (access) of a file or directory if you change the protection of your home directory as follows, no one will be able to access any of your files | $ cd ~/ <br>                         change to your home directory <br>$ chmod 700 .  <br>       don't forget the dot (.) t the end of this command | 
-
-rm
-	delete a file
-	rm -r allows you to delete a directory and everything in it, use it carefully
-
-cp
-	copy a file
-
-man
-	show the manual page for a command
-			$ man cp
-
-	the -k option searches for keywords in all man pages (useful if you forget the name of a command)
-			$ man -k copy
-	usually this produces too many matches and they scroll by too fast to read
-
-			$ man -k copy | less
-
-			Note:  the apopos command does the same thing as "man -k"
-
-			$ apopos copy | less
+|chmod | change the protection (access) of a file or directory if you change the protection of your home directory as follows, no one will be able to access any of your files | $ cd ~/ <br>                         change to your home directory <br>$ chmod 700 .  <br>       don't forget the dot (.) t the end of this command |
+|rm |	delete a file <br> rm -r allows you to delete a directory and everything in it, use it carefully | |
+|cp | copy a file | |
+| man | show the manual page for a command | $ man cp <br> the -k option searches for keywords in all man pages (useful if you forget the name of a command) <br> $ man -k copy <br> usually this produces too many matches and they scroll by too fast to read <br> $ man -k copy | less <br> Note:  the apopos command does the same thing as "man -k" <br> $ apopos copy | less |
 
 which
 			tells you which executable is executed when you type a command
