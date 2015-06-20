@@ -151,28 +151,29 @@ I will NOT test your program with any additional tests.
 
 ##General Requirements:
 
-    I will deduct up to 10 points if your program contains any tabs or is not well formatted.  See the Formatting Requirements page.
+I will deduct up to 10 points if your program contains any tabs or is not well formatted.  See the Formatting Requirements page.
 
-    The first lines of all your files (.h and .cpp) must contain the following comments:
+The first lines of all your files (.h and .cpp) must contain the following comments:
 
+<pre>
     // filename
     // last name, first name
     // ecst_username
+</pre>
 
+##How to turn in code:
 
-How to turn in code:
+You must turn in the following files:
 
-    You must turn in the following files:
-
-        grid.h
-        	grid.cpp
-        shape.h
-        	shape.cpp
-        triangle.h
-        	triangle.cpp
-        square.h
-        	square.cpp
-        circle.h
-        	circle.cpp
-        point.h
-        	point.cpp
+* grid.h
+* grid.cpp
+* shape.h
+* shape.cpp
+* triangle.h
+* triangle.cpp
+* square.h
+* square.cpp
+* circle.h
+* circle.cpp
+* point.h
+* point.cpp
