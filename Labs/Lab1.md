@@ -113,7 +113,7 @@ Linux Pipes
 
 One of the most powerful features of the bash shell is the ability to connect the output of one command to the input of another command.  Consider these two commands:
 
-	$ ls      this will list all the files in the current directory
+	$ ls    this will list all the files in the current directory
 	$ wc    this will count all the characters, words, and lines in the input
 
 If we take the output of ls and connected it to the input of wc (we say "pipe the output of ls to the input of wc") we can find out how many files are in the current directory
