@@ -79,8 +79,8 @@ Class Square will inherit class Shape.  It will provide a single constructor tha
 
 <pre>
     ****
-    *    *
-    *    *
+    *  *
+    *  *
     ****
 </pre>
 
