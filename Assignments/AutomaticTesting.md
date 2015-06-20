@@ -1,5 +1,5 @@
 #How to Test Assignments Automatically
-These instructions work for most of the assignments in this class and for most of the assignments in Tyson's classes. These instructions as well as the [Introduction to Testing](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Introduction to Testing") instructions were taken from Tyson's 211 class. 
+These instructions work for most of the assignments in this class and for most of the assignments in Tyson's classes. These instructions as well as the [Introduction to Testing](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Introduction to Testing") instructions were taken from Tyson's 211 class.
 
 ##Automatic Testing Mechanism
 This is the same mechanism used by [turnin.ecst.csuchico.edu](https://turnin.ecst.csuchico.edu)
@@ -88,7 +88,7 @@ If you know how to use vim, you can use the vimdiff utility.  It shows the two f
 </pre>
 vimdiff will highlight the differences.  You can move around the files using the arrow keys and exit with the command    :qa<enter>
 
-Tyson provides two scripts ([vd]("http://www.ecst.csuchico.edu/%7Etyson/classes/bin/vd vd") and [vde](http://www.ecst.csuchico.edu/%7Etyson/classes/bin/vde vde")) that start vimdiff for you.  Read the comments at the top of the scripts to see how they work.  In order to use these scripts you will need to put them in a directory in your path and give them execute permission
+Tyson provides two scripts ([vd](http://www.ecst.csuchico.edu/%7Etyson/classes/bin/vd vd) and [vde](http://www.ecst.csuchico.edu/%7Etyson/classes/bin/vde vde)) that start vimdiff for you.  Read the comments at the top of the scripts to see how they work.  In order to use these scripts you will need to put them in a directory in your path and give them execute permission
 
 <pre>
 	$ cd
