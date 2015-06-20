@@ -165,6 +165,6 @@ Implement the following operators:
 
 * sin    calculate the sine of the previous number, 45 sin means the sine of 45
 
-1. Note: Assume the user is entering degrees.  Since the cmath functions cos() and sin() expect the angle in radians you will have to convert the number to radians.  Use the constant M_PI from cmath to perform the conversion.
+    * Note: Assume the user is entering degrees.  Since the cmath functions cos() and sin() expect the angle in radians you will have to convert the number to radians.  Use the constant M_PI from cmath to perform the conversion.
 
 * ave   remove all the operands off the stack, calculate their average and push the result on to the stack
