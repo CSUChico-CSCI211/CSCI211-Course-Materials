@@ -133,29 +133,10 @@ Any number of commands can be pipped together.
 | Linux Command     | Command Details     | Examples |
 | :------------- | :------------- | :-------- |
 | cd       | change directory<br> ~ is used to mean your home directory<br>	.. is used to mean the parent of current directory       |$ cd  <br>change to your home directory <br>$ cd  ~user      <br>change to specified user's home directory   (e.g.   $ cd ~tyson) <br> $ cd  ..             <br>change to the parent of the current directory (the directory above the current directory) <br>	$ cd  211       <br>  if "211" is a sub-directory of the current directory, change to it|
-
-
-
-
-
-
-ls
-	list the files in the current directory
-
-pwd
-	show the current directory (called the path)
-
-mkdir
-	make a new directory
-
-$ mkdir 211            make a new directory in the current directory called "211"
-$ mkdir ~/211         make a new directory in your home directory called "211"
-
-chmod
-	change the protection (access) of a file or directory
-	if you change the protection of your home directory as follows, no one will be able to access any of your files
-$ cd                              change to your home directory
-$ chmod 700 .              don't forget the dot (.) t the end of this command
+|ls | list the files in the current directory | |
+|pwd |	show the current directory (called the path)| |
+|mkdir | make a new directory|$ mkdir 211     <br>       make a new directory in the current directory called "211" <br>$ mkdir ~/211   <br>      make a new directory in your home directory called "211" |
+|chmod | change the protection (access) of a file or directory if you change the protection of your home directory as follows, no one will be able to access any of your files | $ cd ~/ <br>                         change to your home directory $ chmod 700 .  <br>       don't forget the dot (.) t the end of this command | 
 
 rm
 	delete a file
