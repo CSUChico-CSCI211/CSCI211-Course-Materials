@@ -21,5 +21,5 @@ There are 7 programming projects for CSCI211.
 |P3      |          |[Linked List of Videos](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/LinkedListVideos.md "Linked List Videos")     |
 |P4      |          |[Calculator](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Calculator.md "Calculator")       |
 |P5      |          |[Kwik-E-Mart](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/KwikEMart.md "Kwik-E-Mart")         |
-|P6      |          |Shapes         |
+|P6      |          |[Shapes](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Shapes.md "Shapes")       |
 |P7      |          |Binary Search Tree         |
