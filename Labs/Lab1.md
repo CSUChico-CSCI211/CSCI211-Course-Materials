@@ -68,7 +68,7 @@ shell looks for an executable file named "ls" in the special collection of direc
 Why text better than clicking buttons?  Consider the problem of editing a group of files.  For example, I have a bunch of files with "112" in them and I need to change the "112" to "211"  The following command changes 112 to 211 in all the .html files in the current directory:
 
 <pre>
-$ for file in \*.html; do sed s/112/211/g &lt; $file &gt; tmp; mv tmp $file; done
+$ for file in *.html; do sed s/112/211/g &lt; $file &gt; tmp; mv tmp $file; done
 </pre>
 
 While it may take some time before you can write such complicated commands, once you learn how to use a text based command shell it is much faster than using a point-and-click interface.
@@ -77,26 +77,25 @@ While it may take some time before you can write such complicated commands, once
 
 Linux assumes that you really want to do what you say you want to do.  In other words, if you use the remove command to delete a file, the file will be deleted.  It won't be put into the trash, it will be deleted.  Once a file is deleted, it is deleted forever (system backups are done every night, so if the file existed the previous night you can get a copy from the backups).
 
-Special Keys
+####Special Keys
 
-^C
-kill the current process
+* ^C kill the current process
 
-^D
-End of input (end of file) character
+* ^D End of input (end of file) character
 When you want to tell a program you are done entering input, type ^D
 
-^Z
-Stop the current process (the process will still exist, but it won't be running).  Don't do this until you understand how to restart processes (commands: jobs, fg, bg).
+* ^Z Stop the current process (the process will still exist, but it won't be running).  Don't do this until you understand how to restart processes (commands: jobs, fg, bg).
 
 
-File Redirection
+####File Redirection
 
 Programs usually write to the current window.  For example, if your program has the following line:  cout << "hello\n"   hello will be written to the current window.
 
 You can tell the bash shell to redirect standard output (i.e. cout) to a file
 
+<pre>
 	$ hello_world > hello_world.myout
+</pre>
 
 Now when the program hello_world is run, text written to standard output will be place in the file hellow_world.myout
 
@@ -104,7 +103,9 @@ Programs usually read from the keyboard.  For example, if your program has the f
 
 You can tell the shell to redirect standard input (i.e. cin) from a file
 
+<pre>
 	$ add < test_1.in
+</pre>
 
 Now when the program add is run, text read from standard input (cin) will be read from the file: test_1.in
 
