@@ -132,7 +132,7 @@ Any number of commands can be pipped together.
 
 | Linux Command     | Command Details     | Examples |
 | :------------- | :------------- | :-------- |
-| cd       | change directory<br> ~ is used to mean your home directory<br>	.. is used to mean the parent of current directory       |$ cd  change to your home directory <br>$ cd  ~user      change to specified user's home directory   (e.g.   $ cd ~tyson) <br> $ cd  ..             change to the parent of the current directory (the directory above the current directory) <br>	$ cd  211         if "211" is a sub-directory of the current directory, change to it|
+| cd       | change directory<br> ~ is used to mean your home directory<br>	.. is used to mean the parent of current directory       |$ cd  <br>change to your home directory <br>$ cd  ~user      <br>change to specified user's home directory   (e.g.   $ cd ~tyson) <br> $ cd  ..             <br>change to the parent of the current directory (the directory above the current directory) <br>	$ cd  211       <br>  if "211" is a sub-directory of the current directory, change to it|
 
 
 
