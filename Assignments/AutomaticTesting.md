@@ -1,6 +1,7 @@
 #How to Test Assignments Automatically
-These instructions work for most of the assignments in this class and for most of the assignments in Tyson's classes.
+These instructions work for most of the assignments in this class and for most of the assignments in Tyson's classes. These instructions as well as the [Introduction to Testing](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Introduction to Testing") instructions were taken from Tyson's 211 class. 
 
+##Automatic Testing Mechanism
 This is the same mechanism used by [turnin.ecst.csuchico.edu](https://turnin.ecst.csuchico.edu)
 
 With most assignments you can use the run_tests bash script to automatically test your program.  A bash script is a program that can be executed by the bash shell.  It is a normal text file just like a .cpp file.
