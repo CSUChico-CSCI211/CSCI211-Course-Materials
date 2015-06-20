@@ -15,7 +15,7 @@ Most assignments have a test directory (e.g. ~tyson/211/tests/p2 for 211's p2 as
 This example is for 211's p2.  Replace the "211" with your course and the "2" with the current assignment number to use this method on other assignments.
 
 1.  Copy the file p2_tests.tar from the tests/p2 directory to the directory containing your program.
-(see how to download files to copy my files to your current directory)
+(see [how to download files](http://www.ecst.csuchico.edu/~tyson/classes/general/how_to_download_files.html) to copy Tyson's files to your current directory)
 
 2. Expand the tar (tape archive) file (works the same on Linux, Cygwin, Mac)
 <pre>
@@ -23,7 +23,7 @@ This example is for 211's p2.  Replace the "211" with your course and the "2" wi
 </pre>
 This will create a sub-directory called tests with all the tests in it and create the run_tests script
 
-3. If you did not download the run_tests script during the first lab (it would be ~/bin/run_tests), download it and put it into your ~/bin directory (create a new directory if it does not exist).<br><br>Name the file run_tests and give it execute permission:
+3. If you did not download the [run_tests script](http://www.ecst.csuchico.edu/%7Etyson/classes/bin/run_tests "run_tests") during the first lab (it would be ~/bin/run_tests), download it and put it into your ~/bin directory (create a new directory if it does not exist).<br><br>Name the file run_tests and give it execute permission:
 <pre>
 	$ cd ~/bin
 	$ chmod 700 run_tests
