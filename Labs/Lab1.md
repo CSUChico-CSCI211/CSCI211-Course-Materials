@@ -360,11 +360,13 @@ In this directory you will find files like t0.in1 and t01.out.  t01.in is the in
 
 An easy way to see the content of a small file is to use the Linux cat command:
 
-$ cat tests/t01.in
-40 2
-$ cat tests/t01.out
-40 + 2 = 42
-$
+<pre>
+	$ cat tests/t01.in
+	40 2
+	$ cat tests/t01.out
+	40 + 2 = 42
+	$
+</pre>
 
 See [Introduction to Testing](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Testing") for full description of how to test your assignments.  If you understand the described mechanism now, it will make your semester much easier, and will improve your grade.  One of the most important aspects of this lab is for you to understand the testing mechanism.
 
@@ -405,8 +407,8 @@ The main point of these assignments is to introduce you to the testing mechanism
 
 Students who don't understand how < and > are used to test assignments struggle throughout the semester.
 
-Exercise Deadline
+##Exercise Deadline
 
-All labs are due at 11:59pm the Friday Saturday following lab.  For this lab you must turn in add.cpp and print.cpp.
+All labs are due at 11:59pm the Saturday following lab.  For this lab you must turn in add.cpp and print.cpp.
 
 If you are not able to complete all the exercises, turn in your partial work for partial credit.
