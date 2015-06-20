@@ -317,36 +317,44 @@ You do not have to turn in this exercise.  The following two exercises must be t
 Change the directory to your lab01_add directory
 
 <pre>
-$ cd ../lab01_add
+	$ cd ../lab01_add
 </pre>
 
 If that did not work, try using the "full directory path" or "full path"
 
-$ cd ~/211/lab01_add
+<pre>
+	$ cd ~/211/lab01_add
+</pre>
 
 When your program is run, it should work like this (the "a.out" "40" and "2" are typed by the user; the "40 + 2 = 42" is printed by the program):
 
-$ a.out
-40
-2
-40 + 2 = 42
-$
+<pre>
+	$ a.out
+	40
+	2
+	40 + 2 = 42
+	$
+</pre>
 
 For this exercise you will need to read in an integer.  You can read an integer in C++ like this:
 
-cin >> value1;
+<pre>
+	cin >> value1;
+</pre>
 
 Where "value1" has been declared as an integer before this line (C++ integers are declared just like in Java).
 
 Create a new file called add.cpp using an editor.  Write the add program so it reads and adds the two numbers.
 
-Compile and run your program to make sure it works correctly.  Your output must EXACTLY match my output (<number><space><+><space><number><space><=><space><number><newline>)
+Compile and run your program to make sure it works correctly.  Your output must EXACTLY match my output (&lt;number&gt;&lt;space&gt;&lt;+&gt;&lt;space&gt;&lt;number&gt;&lt;space&gt;&lt;=&gt;&lt;space&gt;&lt;number&gt;&lt;newline&gt;)
 
 Some sample input and output are available in your lab01_add/tests directory.
 
-$ ls tests
-t01.in  t01.out  t02.in  t02.out  t03.in  t03.out
-$
+<pre>
+	$ ls tests
+	t01.in  t01.out  t02.in  t02.out  t03.in  t03.out
+	$
+</pre>
 
 In this directory you will find files like t0.in1 and t01.out.  t01.in is the input for your program and t01.out is the expected output.  I will use all the tests in this directory to grade your program.  If you pass these tests you will get full credit (these are the same tests used when by turnin.ecst.csuchico.edu).
 
@@ -358,24 +366,26 @@ $ cat tests/t01.out
 40 + 2 = 42
 $
 
-See Introduction to Testingfor full description of how to test your assignments.  If you understand the described mechanism now, it will make your semester much easier, and will improve your grade.  One of the most important aspects of this lab is for you to understand the testing mechanism.
+See [Introduction to Testing](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Testing") for full description of how to test your assignments.  If you understand the described mechanism now, it will make your semester much easier, and will improve your grade.  One of the most important aspects of this lab is for you to understand the testing mechanism.
 
-Once your program is working, turn add.cpp in on turnin.ecst.csuchico.edu.  See instructions for turning in files.
+Once your program is working, turn add.cpp in on [turnin.ecst.csuchico.edu](https://turnin.ecst.csuchico.edu/ "Tyson's Turnin").  See instructions for [turning in files.](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Turnin.md "How to Turnin")
 
-You mut pass all the posted tests to get credit for a lab assignment.
+You must pass all the posted tests to get credit for a lab assignment.
 
-Lab exercises are due midnight the Friday Saturday night following lab.
+Lab exercises are due midnight the Saturday night following lab.
 
-Exercise 4:  Write a program that reads a number and prints "hello" that number of times:
+##Exercise 4:  Write a program that reads a number and prints "hello" that number of times:
 
-$ a.out
-5
-0 hello
-1 hello
-2 hello
-3 hello
-4 hello
-$
+<pre>
+	$ a.out
+	5
+	0 hello
+	1 hello
+	2 hello
+	3 hello
+	4 hello
+	$
+</pre>
 
 All the characters shown above were printed by the program, except the 5<enter> which was typed by the user.
 
@@ -387,9 +397,9 @@ When your program is working, test it with the posted tests (see the testing and
 
 Make sure your program passes all the tests.
 
-Turn in print.cpp to turnin.ecst.csuchico.edu.
+Turn in print.cpp to [turnin.ecst.csuchico.edu](https://turnin.ecst.csuchico.edu/ "Tyson's Turnin").
 
-Exercise 5: Make sure you understand the testing mechanism
+##Exercise 5: Make sure you understand the [testing mechanism](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Testing")
 
 The main point of these assignments is to introduce you to the testing mechanism.
 
