@@ -180,14 +180,14 @@ The body of the simulation should proceed as follows.  If you don't follow this 
             * place them on the checker_queue (don't need a priority, use the same priority for all customers)
         // NOTE: this has to execute before you place customers on checkers, but you will have to implement placing
         // customers on checkers before you can test this part of the program
-        For all the customers currently being served by a checker that are done at time == clock
+        3. For all the customers currently being served by a checker that are done at time == clock
 		    * increment/decrement the checker's total cash
             * print the appropriate message (paid or stole message)
             * delete this customer
             * decrement the number of customers (this is used in the for loop)
             * set the checker to NULL (indicates it has no customer)
             * if the customer was a robber, update the checker so it will end its break at the correct time
-        3. While there is an available checker and there is a customer on the checker_queue
+        4. While there is an available checker and there is a customer on the checker_queue
 			* remove the customer from the checker_queue and assign it to an available checker (always pick the available checker w/the lowest index)
             * calculate the time the customer will be done checking-out/stealing (store this done time in struct Checker)
             * print the start checkout message
