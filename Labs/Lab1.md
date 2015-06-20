@@ -130,7 +130,7 @@ Any number of commands can be pipped together.
 
 ####Common Linux commands
 
-<| Linux Command     | Command Details     | Examples |
+| Linux Command     | Command Details     | Examples |
 | :------------- | :------------- | :-------- |
 | cd       | change directory
 	~ is used to mean your home directory
