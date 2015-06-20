@@ -127,12 +127,13 @@ I will deduct up to 10 points if your program contains any tabs or is not well f
 
 The first lines of all your files (.h and .cpp) must contain the following comments:
 
-// filename
-// last name, first name
-// ecst_username
+<pre>
+    // filename
+    // last name, first name
+    // ecst_username
+</pre>
 
-
-Testing Your Program:
+##Testing Your Program:
 
 For this assignment I have provided a bash script (a program that the bash shell can execute) to automatically test your program.  Read the automatic testing instructions and download the .tar file in the src/p4/tests directory.
 
@@ -143,27 +144,27 @@ You MUST turn in your assignment several times (at least three) during developme
 
 Turn in the following files using https://turnin.ecst.csuchico.edu.
 
-calc.cpp
-dstack.h
-dstack.cpp
+* calc.cpp
+* dstack.h
+* dstack.cpp
 
 
-Extra credit:
+##Extra credit:
 
-No extra credit points will be given to late assignments.  Your must turn in a non-extra credit version in addition to the extra credit version.
+**No extra credit points will be given to late assignments.  Your must turn in a non-extra credit version in addition to the extra credit version.
 
-The extra credit version must also pass all of the non-extra credit tests.
+The extra credit version must also pass all of the non-extra credit tests.**
 
 You will get 10 points extra credit if your program passes all the extra credit tests, and a fraction of 10 points if it passes some of the extra credit tests.  Since these are multi-character operators, you will have to modify how you read the input.
 
 Implement the following operators:
 
-sqrt   calculate the square root of the previous number,  15 sqrt means the square root of 15.
+* sqrt   calculate the square root of the previous number,  15 sqrt means the square root of 15.
 
-cos   calculate the cosine of the previous number, 30 cos means the cosine of 30
+* cos   calculate the cosine of the previous number, 30 cos means the cosine of 30
 
-sin    calculate the sine of the previous number, 45 sin means the sine of 45
+* sin    calculate the sine of the previous number, 45 sin means the sine of 45
 
-Note: Assume the user is entering degrees.  Since the cmath functions cos() and sin() expect the angle in radians you will have to convert the number to radians.  Use the constant M_PI from cmath to perform the conversion.
+1. Note: Assume the user is entering degrees.  Since the cmath functions cos() and sin() expect the angle in radians you will have to convert the number to radians.  Use the constant M_PI from cmath to perform the conversion.
 
-ave   remove all the operands off the stack, calculate their average and push the result on to the stack
+* ave   remove all the operands off the stack, calculate their average and push the result on to the stack
