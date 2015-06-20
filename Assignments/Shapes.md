@@ -88,62 +88,68 @@ The x,y will determine where in the Grid the rectangle is drawn.  For example, i
 
 Class Square can be used like this:
 
-int main()
-{
+<pre>
+	int main()
+	{
 
-Grid my_grid;
-Square my_square(5,7,10);   //  is located at x = 5, y = 7 and is 10x10 characters in size
-my_square.draw(my_grid);
-my_grid.print();
+	Grid my_grid;
+	Square my_square(5,7,10);   //  is located at x = 5, y = 7 and is 10x10 characters in size
+	my_square.draw(my_grid);
+	my_grid.print();
 
-}
-
+	}
+</pre>
 
 Class Triangle works just like class Square, but all triangles are the same size, and it uses the character '+'.  Thus, the constructor only takes x and y: Triangle::Triangle(int x, int y).  Triangles must be drawn as shown below.
 
+<pre>
           +
          + +
         +++++
-
+</pre>
 
 Position the triangle so its top is in row y and its left most + is in column x.  The # in the next diagram shows where the (x,y) point is.
 
-# +
- + +
-+++++
-
+<pre>
+		# +
+		 + +
+		+++++
+</pre>
 
 
 
 Class Circle works just like class Triangle, but uses 'o' (the lowercase letter o, not the number 0).  All circles are the same size and must be drawn as shown below.  Once again, put its top row in row y, and its leftmost column in col x (just like with triangle).
 
+<pre>
          oo
         o  o
         o  o
          oo
-
+</pre>
 
 Class Point's constructor takes the same (x,y) as the other shapes and a character:  Point(int x, int y, char c).  It will draw the single character (c) at the location (x,y).
 
 
-Hints:
+##Hints:
 
 This program has many classes and files.  However, they are all very simple.  Once you get one shape working, creating the other shapes is easy.  Make sure you get one shape (probably best to start with the square) completely working before you start creating the others.
 
 The origin (x = 0, y = 0) of the grid is at the upper left.  This makes the grid easy to draw.  As an example, a square of size 2 drawn at (x,y) = (0,0) would occupy the following spots in the grid:
 
+<pre>
     0,0
     0,1
     1,0
     1,1
+</pre>
 
-Testing Your Program:
+##Testing Your Program:
 
 For this assignment I have provided a bash script (a program that the bash shell can execute) to automatically test your program.  Read the automatic testing instructions and download the .tar file in the src/p6/tests directory.
 
 I will NOT test your program with any additional tests.
 
-General Requirements:
+##General Requirements:
 
     I will deduct up to 10 points if your program contains any tabs or is not well formatted.  See the Formatting Requirements page.
 
