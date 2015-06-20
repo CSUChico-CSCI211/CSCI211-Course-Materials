@@ -48,64 +48,72 @@ I recommend writing Dstack from scratch.  If you copy code from my on-line list 
 
 ###Input:
 
-    Your program must read a single equation from standard input. The operators are + - * / ^ (^ is power, 2 4 ^ is 2 raised to the power of 4).  Numbers can be any double number, for example 4, 4.2, .2, 0.2, 0000.233.  You can assume that the number is small enough to fit into a double variable (I won't give you a number with 200 digits).
+Your program must read a single equation from standard input. The operators are + - * / ^ (^ is power, 2 4 ^ is 2 raised to the power of 4).  Numbers can be any double number, for example 4, 4.2, .2, 0.2, 0000.233.  You can assume that the number is small enough to fit into a double variable (I won't give you a number with 200 digits).
 
-    Your program should ignore all white space (spaces, tabs, newlines).
+Your program should ignore all white space (spaces, tabs, newlines).
 
-    If two numbers are in a row, there must be a space between them.  For example, 42 is the number forty-two, and 4  2 are the numbers four and two.
+If two numbers are in a row, there must be a space between them.  For example, 42 is the number forty-two, and 4  2 are the numbers four and two.
 
-    There do not have to be spaces between numbers and operators.  For example, 10 10+ is a legal equation.
+There do not have to be spaces between numbers and operators.  For example, 10 10+ is a legal equation.
 
-    There do not have to be spaces between two operators.  For example, 10 10 10++ is a legal equation.
+There do not have to be spaces between two operators.  For example, 10 10 10++ is a legal equation.
 
 
-Files:
+###Files:
 
 Each class should have a .h file and a .cpp file for the stack (note that the filenames are all lower case):
 
-dstack.h
-dstack.cpp
+<pre>
+    dstack.h
+    dstack.cpp
+</pre>
 
 In addition to the above files, you will need to turn in a file containing your main() function:
 
+<pre>
 calc.cpp
+</pre>
 
-Program Output:
+###Program Output:
 
 If the input is a correct post-fix expression, your program should print the result.
 
-For example, if the input is 10 10+, your program should output 20 followed by a newline, and nothing else (don't print any prompts or "answer =").
+For example, if the input is 10 10+, your program should output 20 followed by a newline, **and nothing else** (don't print any prompts or "answer =").
 
-Arithmetic Overflow:
+###Arithmetic Overflow:
 
 Assume that all intermediate results and the final result is small enough to fit in a double.  For example, I will not test on an expression like:  2 ^ 1000000000
 
-Errors and Error Messages:
+###Errors and Error Messages:
 
-    All errors must be detected in calc.cpp.  Recall that stack pop() must return an error when the stack is empty (see above).
+All errors must be detected in calc.cpp.  Recall that stack pop() must return an error when the stack is empty (see above).
 
-    All errors must be printed in calc.cpp (you cannot print an error message in any of the stack functions).
+All errors must be printed in calc.cpp (you cannot print an error message in any of the stack functions).
 
-    If the input is not a valid post-fix expression, your program should print the following to standard error (cerr):
+If the input is not a valid post-fix expression, your program should print the following to standard error (cerr):
 
- Error: Invalid expression.
+<pre>
+    Error: Invalid expression.
+</pre>
 
-    followed by a newline (not a blank line, but a newline) and then terminate the program.  Programs can be terminated by using the exit() functions, but you may only call exit() from calc.cpp.
+followed by a newline (not a blank line, but a newline) and then terminate the program.  Programs can be terminated by using the exit() functions, but you may only call exit() from calc.cpp.
 
-    Your program must check for all possible errors (except numbers that are too large).  This includes all illegal mathmatical operations such as divide by zero.  The power function is especially problematic.  Consider it closely.
+Your program must check for all possible errors (except numbers that are too large).  This includes all illegal mathmatical operations such as divide by zero.  The power function is especially problematic.  Consider it closely.
 
 
-Hints:
+##Hints:
 
 The algorithm is:
 
-while (not the end of the input)
+<pre>
+    while (not the end of the input)
 
-If the next input is a number, read it and push it on the stack
-If the next input is an operator, read it, pop 2 operands off of the stack, apply the operator, push the result onto the stack
-When you reach the end of the input:
-if there is one number on the stack, print it
-else error
+        If the next input is a number, read it and push it on the stack
+        If the next input is an operator, read it, pop 2 operands off of the stack, apply the operator, push the result onto the stack
+        When you reach the end of the input:
+            if there is one number on the stack, print it
+            else error
+</pre>
 
 
 I suggest you implement and test the stack before you tackle the calculator aspects of the program.  You will have to write a few lines of code in main() to do this testing, but it will save you time in the long run.
@@ -113,7 +121,7 @@ I suggest you implement and test the stack before you tackle the calculator aspe
 You can't just use getline() or cin >> string_variable for this program because you usually don't know if an operator or an operand (a number) will be the next thing in the input stream.  You will need to use cin.peek() to look at the next character in the input.  cin.peek() returns the next character without actually reading it.  In other words, the next character you read will be the one returned by cin.peek().  If it is whitespace (space, tab, newline) you can skip it using cin.ignore().  If it is a legal operator, you can read the single character using cin >> char_variable.  If the next character is a digit, you can use cin >> double_variable to read the entire number.  cin.peek() returns EOF (which is defined as -1) if end-of-file is true.
 
 
-General Requirements:
+##General Requirements:
 
 I will deduct up to 10 points if your program contains any tabs or is not well formatted.  See the Formatting Requirements page.
 
