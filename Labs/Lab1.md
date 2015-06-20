@@ -136,7 +136,7 @@ Any number of commands can be pipped together.
 |ls | list the files in the current directory | |
 |pwd |	show the current directory (called the path)| |
 |mkdir | make a new directory|$ mkdir 211     <br>       make a new directory in the current directory called "211" <br>$ mkdir ~/211   <br>      make a new directory in your home directory called "211" |
-|chmod | change the protection (access) of a file or directory if you change the protection of your home directory as follows, no one will be able to access any of your files | $ cd ~/ <br>                         change to your home directory $ chmod 700 .  <br>       don't forget the dot (.) t the end of this command | 
+|chmod | change the protection (access) of a file or directory if you change the protection of your home directory as follows, no one will be able to access any of your files | $ cd ~/ <br>                         change to your home directory <br>$ chmod 700 .  <br>       don't forget the dot (.) t the end of this command | 
 
 rm
 	delete a file
