@@ -67,11 +67,13 @@ shell looks for an executable file named "ls" in the special collection of direc
 
 Why text better than clicking buttons?  Consider the problem of editing a group of files.  For example, I have a bunch of files with "112" in them and I need to change the "112" to "211"  The following command changes 112 to 211 in all the .html files in the current directory:
 
-$ for file in *.html; do sed s/112/211/g < $file > tmp; mv tmp $file; done
+<pre>
+$ for file in \*.html; do sed s/112/211/g &lt; $file &gt; tmp; mv tmp $file; done
+</pre>
 
 While it may take some time before you can write such complicated commands, once you learn how to use a text based command shell it is much faster than using a point-and-click interface.
 
-Know What You are Doing
+####Know What You are Doing
 
 Linux assumes that you really want to do what you say you want to do.  In other words, if you use the remove command to delete a file, the file will be deleted.  It won't be put into the trash, it will be deleted.  Once a file is deleted, it is deleted forever (system backups are done every night, so if the file existed the previous night you can get a copy from the backups).
 
