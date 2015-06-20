@@ -149,20 +149,27 @@ For 211 we will not be using an integrated development environment (IDE).  The r
 
 When writing programs without an IDE you use a stand alone editor to create your program (vs. using the editor built in to Visual C++). This means you can pick from hundreds of available editors.  Here are some common choices (most are available on the computers in 251):
 
-SciTE:  Menu based editor that is easy to use.  Similar to notepad.  Can download on your home machine so you can use the same editor at home as you use in lab.  Cannot use over text-based connections (like putty)  (actually there is a way to use it but it takes work to set up).
-nano:  Simple text based editor (no mouse), all the commands are always on the screen (on some platforms a similar editor called pico is available and nano is not). You can use nano via a text-based connection (like putty).
-gvim: Graphical version of  vim (see below).  A little harder to learn how to use.
-vim : Powerful and very popular version of the popular vi editor.  Works on most Linux and Microsoft platforms.  It is hard to learn how to use but very fast once you learn how to use.  I will talk about it later in the semester.  Vim Homepage
-emacs: Powerful and very popular editor.  It is hard to learn how to use but provides powerful tools once you learn how to use it.  Works on most Linux and Microsoft platforms GNU's emacs page
+* SciTE:  Menu based editor that is easy to use.  Similar to notepad.  Can download on your home machine so you can use the same editor at home as you use in lab.  Cannot use over text-based connections (like putty)  (actually there is a way to use it but it takes work to set up).
+* nano:  Simple text based editor (no mouse), all the commands are always on the screen (on some platforms a similar editor called pico is available and nano is not). You can use nano via a text-based connection (like putty).
+* gvim: Graphical version of  vim (see below).  A little harder to learn how to use.
+* vim : Powerful and very popular version of the popular vi editor.  Works on most Linux and Microsoft platforms.  It is hard to learn how to use but very fast once you learn how to use. Vim Homepage
+* emacs: Powerful and very popular editor.  It is hard to learn how to use but provides powerful tools once you learn how to use it.  Works on most Linux and Microsoft platforms GNU's emacs page
+* sublime: Graphical paid editor favorite of many upper class students and is a great editor.
+* Atom: New open source graphical editor from GitHub, offers plugins including ones that allow you to connect to SFTP connections and remotely edit code on lab machines from home.
 
 All these editors works from the command line:
 
-$ SciTE hello.cpp &
+<pre>
+	$ SciTE hello.cpp &
+</pre>
 
-NOTE: SciTE in OCNL 251 is broken and cannot create a new file.  You have to create the file BEFORE you edit it:
+**NOTE: SciTE in OCNL 251 is broken and cannot create a new file.  You have to create the file BEFORE you edit it:**
 
-$ touch hello.cpp             // the touch command will create a new file if the given file does not exist
-$ SciTE hello.cpp &
+<pre>
+	$ touch hello.cpp
+	// the touch command will create a new file if the given file does not exist
+	$ SciTE hello.cpp &
+</pre>
 
 Note:  The & at the end of this command tells the shell to create a new process to run the given command.  That means that while the editor window is running you can continue to use the command prompt.
 
@@ -172,15 +179,15 @@ If you plan to use Putty to do your assignments at home (not recommended), then 
 
 Whatever editor you end up using, become an expert.
 
-Turning in Lab Assignments
+##Turning in Lab Assignments
 
-Some of the lab exercises must be turned in using turnin.ecst.csuchico.edu (see instructions for turning in file) for you to get credit.  For this lab you must turn in files for exercises 4 and 5.  At the end of each exercise I will indicate what files must be turned in.
+Some of the lab exercises must be turned in using [turnin.ecst.csuchico.edu](https://turnin.ecst.csuchico.edu/ "Tyson's Turnin") (see instructions for [turning in file](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Turnin.md "How to Turnin")) for you to get credit.  For this lab you must turn in files for exercises 4 and 5.  At the end of each exercise I will indicate what files must be turned in.
 
 My goal is to provide assignments that you can complete during lab.  However, if you cannot finish the assignments during lab, you have until midnight on the Friday Saturday following lab to turn them in (most semesters the deadline is Friday, but since there is a Friday afternoon lab in Spring 2015, the deadline is Saturday; you should try to turn them in Friday, it is easy to forget about assignments due on Saturday).
 
 Some of the lab exercises do not have to be turned in.  Usually these assignments provide the information you need for subsequent lab assignments and programming assignments.  I strongly suggest you complete all lab assignments.
 
-Exercise 1: Setting up your 211 environment
+##Exercise 1: Setting up your 211 environment
 
 The following steps set up the directories for the entire semester.  Make sure you follow the instructions carefully.
 
@@ -190,33 +197,40 @@ The following will create two directories "211" and "bin" in the directory in wh
 
 When I provide a "$" with some text after it, type that text (a command) into the shell.  When typing commands DO NOT type the // or the text after the //
 
-$ cd                // go to your home directory
-$ chmod 700 .       // change the protection so no one can steal your files (you can skip this on your laptop)
+<pre>
+	$ cd                // go to your home directory
+	$ chmod 700 .       // change the protection so no one can steal your files (you can skip this on your laptop)
+</pre>
 
 
 There are three methods to download the needed file.  If your computer has the utility wget, use the first.  Otherwise use the second.
 
-Method 1: your computer has the wget command (type "which wget" at the $, if a filename is printed then wget is installed)
+* Method 1: your computer has the wget command (type "which wget" at the $, if a filename is printed then wget is installed)
 
-$ wget www.ecst.csuchico.edu/~tyson/211/downloads/211.tar     // copy 211.tar from my web page to current directory
+<pre>
+	$ wget www.ecst.csuchico.edu/~tyson/211/downloads/211.tar     // copy 211.tar from my web page to current directory
+</pre>
 
+* Method 2: your computer does not have wget
 
-Method 2: your computer does not have wget
-
+<pre>
 $ sftp USERNAME@jaguar.csuchico.edu    // USERNAME must be your ecst username
+</pre>
 
 If you get an error message, type this command  ($ rm .ssh/known_hosts) and retype the above sftp command
 If you don't get an error message, you should be prompted for your ecst password
 Once you log in you will see the sftp prompt "sftp> "
 For the following, type everything after the "sftp> "
 
-Connected to jaguar.ecst.csuchico.edu.
-sftp> cd /user/faculty/tyson/211/downloads   // change directory on jaguar to the 211 downloads directory
-sftp> get 211.tar                            // copy the file "211.tar" from jaguar to your computer
-...
-sftp> quit                                   // exit sftp
+<pre>
+	Connected to jaguar.ecst.csuchico.edu.
+	sftp> cd /user/faculty/tyson/211/downloads   // change directory on jaguar to the 211 downloads directory
+	sftp> get 211.tar                            // copy the file "211.tar" from jaguar to your computer
+	...
+	sftp> quit                                   // exit sftp
+</pre>
 
-Method 3: use a web browswer
+* Method 3: use a web browser
 
 Save the file 211.tar into your home directory (simply clicking on 211.tar will download it to your downloads directory, move it to your home directory).
 
@@ -225,69 +239,86 @@ While this might seem like the easiest method, knowing both wget and sftp is ver
 The "tar" file you just downloaded is like a .zip file.  It contains all the directories and files you need this semester.
 When expanded it will create a directory called "211"  If you already have a directory or file named "211" you must rename it
 
-$ mv 211 211.old           // only do this if you already have a 211 directory or file
-
+<pre>
+	$ mv 211 211.old           // only do this if you already have a 211 directory or file
+</pre>
 
 Unpack 211.tar (this creates the directory 211 with a subdirectory for each assignment)
-$ tar -xf 211.tar          // extract all the directories and files
-$ ls                       // you should see the directories "211" and "bin"
-$ ls 211                   // you should see a bunch of lab and project directories
-$ cd 211/lab01_hello       // change to the directory for the following exercise
+
+<pre>
+	$ tar -xf 211.tar          // extract all the directories and files
+	$ ls                       // you should see the directories "211" and "bin"
+	$ ls 211                   // you should see a bunch of lab and project directories
+	$ cd 211/lab01_hello       // change to the directory for the following exercise
+</pre>
 
 If you are working on a computer in the lab, you can repeat this process on your home computer/laptop.  You can copy files to/from jaguar and your home computer/laptop using sftp.
 
-Exercise 2: Creating, compiling, and running a C++ program
+##Exercise 2: Creating, compiling, and running a C++ program
 
 For this lab you will be writing three programs.  It is a very good idea to put each program in its own directory.  If you get in the habit of putting each program in its own directory you will save time later in the semester.  I regularly see students waste time because they attempt to put multiple programs in one directory.  The above step created three directories for lab 1:  ~/211/lab01_hello  ~/211/lab01_print  ~/211/lab01_add.
 
 In your directory for lab 1 hello (~211/lab01_hello if you follow my instructions above), create the file hello.cpp (use any editor, I recommend that you use scite if you don't know vim (use vim if you know vim)).  Start the editor with "hello.cpp" as the filename:
 
+<pre>
 $ touch hello.cpp     // only in OCNL 251 because SciTE is broken
 $ SciTE hello.cpp &
+</pre>
 
 the & starts the process in the background and allows you to use the editor AND the command window at the same time
 
 -or-
 
+<pre>
 $ vim hello.cpp
-
+</pre>
 
 Now edit the file so it contains the following text.  Save the file and exit the editor.
 
-#include <iostream>
-using namespace std;
+<pre>
+	#include <iostream>
+	using namespace std;
 
-int
-main()
-{
+	int
+	main()
+	{
 
-	cout << "hello world" << endl;
-	return 0;
+		cout << "hello world" << endl;
+		return 0;
 
-}
+	}
+</pre>
 
 Compile this file using the command:
 
-$ g++   hello.cpp
+<pre>
+	$ g++   hello.cpp
+</pre>
 
 if you got an error, use the editor to fix the error
 
 This should have created the file a.out, use "$ ls -l" to find out if a.out is in your directory.  Notice that a.out automatically has execute protection ("x").  When a file has execute permission you can execute it.
 
-$ ls -l a.out
+<pre>
+	$ ls -l a.out
+</pre>
 
 Run your hello program.  You can execute the program by typing a.out at the Linux prompt.
 
+<pre>
 $ a.out
-
-	If a.out doesn't work, try ./a.out.  If "./a.out" worked and "a.out" did not work, read about how to fix your path.
+</pre>
+If a.out doesn't work, try ./a.out.  If "./a.out" worked and "a.out" did not work, read about how to fix your path.
 
 You do not have to turn in this exercise.  The following two exercises must be turned in.
-Exercise 3: Write a program that reads two numbers, adds them together, and prints the result
+
+##Exercise 3: Write a program that reads two numbers, adds them together, and prints the result
 
 Change the directory to your lab01_add directory
 
+<pre>
 $ cd ../lab01_add
+</pre>
 
 If that did not work, try using the "full directory path" or "full path"
 
