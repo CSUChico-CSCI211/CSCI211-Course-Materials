@@ -88,7 +88,7 @@ If you know how to use vim, you can use the vimdiff utility.  It shows the two f
 </pre>
 vimdiff will highlight the differences.  You can move around the files using the arrow keys and exit with the command    :qa<enter>
 
-Tyson provides two scripts ([vd](http://www.ecst.csuchico.edu/%7Etyson/classes/bin/vd vd) and [vde](http://www.ecst.csuchico.edu/%7Etyson/classes/bin/vde vde)) that start vimdiff for you.  Read the comments at the top of the scripts to see how they work.  In order to use these scripts you will need to put them in a directory in your path and give them execute permission
+Tyson provides two scripts ([vd](http://www.ecst.csuchico.edu/%7Etyson/classes/bin/vd "vd") and [vde](http://www.ecst.csuchico.edu/%7Etyson/classes/bin/vde "vde")) that start vimdiff for you.  Read the comments at the top of the scripts to see how they work.  In order to use these scripts you will need to put them in a directory in your path and give them execute permission
 
 <pre>
 	$ cd
