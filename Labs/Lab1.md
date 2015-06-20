@@ -139,14 +139,11 @@ Any number of commands can be pipped together.
 |chmod | change the protection (access) of a file or directory if you change the protection of your home directory as follows, no one will be able to access any of your files | $ cd ~/ <br>                         change to your home directory <br>$ chmod 700 .  <br>       don't forget the dot (.) t the end of this command |
 |rm |	delete a file <br> rm -r allows you to delete a directory and everything in it, use it carefully | |
 |cp | copy a file | |
-| man | show the manual page for a command | $ man cp <br> the -k option searches for keywords in all man pages (useful if you forget the name of a command) <br> $ man -k copy <br> usually this produces too many matches and they scroll by too fast to read <br> $ man -k copy | less <br> Note:  the apopos command does the same thing as "man -k" <br> $ apopos copy | less |
-
-which
-			tells you which executable is executed when you type a command
-			$ which cp
+| man | show the manual page for a command | $ man cp <br> the -k option searches for keywords in all man pages (useful if you forget the name of a command) <br> $ man -k copy <br> usually this produces too many matches and they scroll by too fast to read <br> $ man -k copy \| less <br> Note:  the apopos command does the same thing as "man -k" <br> $ apopos copy \| less |
+|which| tells you which executable is executed when you type a command |$ which cp |
 
 
-Linux editors:
+####Linux editors:
 
 For 211 we will not be using an integrated development environment (IDE).  The reason we are not using an IDE is because I want you to develop a good understanding of the tasks performed by an IDE.  Once you understand these tasks well you can switch to an IDE.
 
