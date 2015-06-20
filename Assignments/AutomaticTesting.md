@@ -22,21 +22,16 @@ This example is for 211's p2.  Replace the "211" with your course and the "2" wi
 </pre>
 This will create a sub-directory called tests with all the tests in it and create the run_tests script
 
-3. If you did not download the run_tests script during the first lab (it would be ~/bin/run_tests), download it and put it into your ~/bin directory (create a new directory if it does not exist).
-
-Name the file run_tests and give it execute permission:
+3. If you did not download the run_tests script during the first lab (it would be ~/bin/run_tests), download it and put it into your ~/bin directory (create a new directory if it does not exist).<br><br>Name the file run_tests and give it execute permission:
 <pre>
 	$ cd ~/bin
 	$ chmod 700 run_tests
 </pre>
-Update your PATH so it includes your ~/bin, but use your entire directory path (for example, my home directory is /home/bryan, so I want to add /home/bryan/bin to my PATH)
-
-You can set your PATH variable in your ~/.bashrc file (Linux) or your ~/.bash_profile (Mac OS).  Create the file if it does not exist.  An example of what you would add to this file:
+Update your PATH so it includes your ~/bin, but use your entire directory path (for example, my home directory is /home/bryan, so I want to add /home/bryan/bin to my PATH)<br><br>You can set your PATH variable in your ~/.bashrc file (Linux) or your ~/.bash_profile (Mac OS).  Create the file if it does not exist.  An example of what you would add to this file:
 <pre>
 	PATH=$PATH:/home/bryan/bin
 </pre>
 no spaces, use your home directory, not my home directory
-
 4. Run the run_tests bash script followed by the name of the executable (this example assumes the executable is called "videos").  The bash script will create a results directory with the results from your program.
 <pre>
 	$ run_tests videos
