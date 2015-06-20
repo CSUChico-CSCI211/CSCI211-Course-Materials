@@ -198,35 +198,35 @@ The body of the simulation should proceed as follows.  If you don't follow this 
 
 This program uses command line arguments and file input/output.  I will provide a script that handles the command line arguments and the file input/output.  However, when manually testing your program you must provide the command line arguments.  Look at the .cmd files in the test directory to see the command line arguments of each test.
 
-General Requirements:
+##General Requirements:
 
 The first lines of all your files (.h and .cpp) must contain the following comments:
 
-// filename
-// last name, first name
-// ecst_username
+<pre>
+	// filename
+	// last name, first name
+	// ecst_username
+</pre>
 
-
-How to turn in code:
+##How to turn in code:
 You MUST turn in your assignment several times (at least three) during development.  Only the last submission has to compile and run and only the last submission will be graded.  The submissions should show your progress (e.g. the first submission has a little bit of the program working, the second a little more, etc).  When I suspect cheating I will look at these early submissions for a clear development trend; I want to prevent students from copying finished programs from another student and then turning them in.
 
 Turn in the following files using https://turnin.ecst.csuchico.edu.
-
-
-sim.cpp
-pqueue.h
-pqueue.cpp
-cust.h
-cust.cpp
+* sim.cpp
+* pqueue.h
+* pqueue.cpp
+* cust.h
+* cust.cpp
 
 
 
 
-Extra Credit:
+##Extra Credit:
 
-No extra credit points will be given to late assignments (both your regular assignment and the extra credit must be turned in on time).
+**No extra credit points will be given to late assignments (both your regular assignment and the extra credit must be turned in on time).
 
-You must turn in the regular assignment code separately from the extra credit assignment code (I will create a separate assignment on https://turnin.ecst.csuchico.edu).
+You must turn in the regular assignment code separately from the extra credit assignment code (I will create a separate assignment on https://turnin.ecst.csuchico.edu).**
+
 You will get 10 points extra credit if your program passes all the extra credit tests (a fraction of 10 points if you pass some of the extra credit tests).  I posted one extra credit tests (tests/p5/extra_credit).  I will use additional tests when grading the extra credit.
 
 Instead of having a single checkout queue, give each checker its own queue.
@@ -237,4 +237,6 @@ If two or more checker queues have the same number of customers, use the checker
 
 Update the "done shopping" message to include the checker the customer is waiting for:
 
-30: Homer done shopping, waiting for checker 2
+<pre>
+	30: Homer done shopping, waiting for checker 2
+</pre>
