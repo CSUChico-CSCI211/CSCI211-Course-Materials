@@ -38,7 +38,7 @@ Time will be represented by a single integer starting at 1.  In the loop below t
 The input file will be arbitrarily ordered and will have the format:
 
 <pre>
-<name> <shopper/robber> <arrival time> <number of items to purchase/steal>
+&lt;name&gt; &lt;shopper/robber&gt; &lt;arrival time&gt; &lt;number of items to purchase/steal&gt;
 </pre>
 
 <pre>
