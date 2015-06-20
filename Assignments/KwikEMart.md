@@ -140,67 +140,61 @@ There are many ways to implement this assignment.  The following hints describe 
 
 Each customer in the input contains the string "shopper" or the string "robber".  It is tempting to store this string in the Cust objects, but it is much better to use a boolean value (bool) to store this condition.  Consider the following call to the Cust constructor.  It converts the string role_string into a boolean that is true if role_string == "robber":
 
-new Cust(name, (role_string == "robber" ? 1 : 0), arrival_time, num_items);
+<pre>
+	new Cust(name, (role_string == "robber" ? 1 : 0), arrival_time, num_items);
+</pre>
 
-The file sim.cpp will contain the functions main() and run_simulation().
+The file sim.cpp will contain the functions main() and *run_simulation()*.
 
 Perform all the input in main().  Read the customers one at a time, create a Cust object for the new customer, and then insert the Cust onto a priority queue ordered by their arrival time (if you use arrival time as the priority, they will be ordered correctly).  arrival_q would be a good name for this queue.
 
-Once all the customers have been read and inserted into the arrival queue, call run_simulation().  You will need to pass to run_simulation()the arrival queue, the number of checkers, the checker's break, and an ofstream (to be used for output, all non-error output is written to the file given on the command line).
+Once all the customers have been read and inserted into the arrival queue, call *run_simulation()*.  You will need to pass to *run_simulation()* the arrival queue, the number of checkers, the checker's break, and an ofstream (to be used for output, all non-error output is written to the file given on the command line).
 
 Checkers can be implemented as an array of Checker structs.  This struct must contain a pointer to their current Cust.  If the checker is not serving anyone, its Cust pointer should be NULL.  Since you don't know how many checkers there are until run time, you cannot create this array until run time:
 
-void run_simulation(Pqueue &arrival_queue, int num_checkers, int break_duration, ostream &os)
-{
-    // create an array of Checker structures
-    Checker *checkers = new Checker[num_checkers];
+<pre>
+	void run_simulation(Pqueue &arrival_queue, int num_checkers, int break_duration, ostream &os)
+	{
+	    // create an array of Checker structures
+	    Checker* checkers = new Checker[num_checkers];
 
-    // now use a loop to initialized all elements of the Checker structures
-    ...
+	    // now use a loop to initialized all elements of the Checker structures
+	    ...
 
-}
-
+	}
+</pre>
 
 The body of the simulation should proceed as follows.  If you don't follow this order, your output will not be in the correct order:
 
-    initialize num_customers to equal the number of customers in the arrival_queue
-    for (clock = 1;  num_customers > 0;  clock++)
 
-
-        For all customers waiting on the queue to enter the store (i.e. those on the arrival_queue) that have an arrival_time == clock
-
-            remove them from the arrival_queue
-            print the appropriate message (entering store)
-            calculate what time they will be done shopping (hint: depends on the number of items)
-            place them on the shopping_queue using the time they will be done shopping as the priority
-
-        For all customers on the shopping_queue that are done shopping
-
-            remove them from the shopping_queue
-            print the appropriate message (done shopping)
-            place them on the checker_queue (don't need a priority, use the same priority for all customers)
-
+    1. initialize num_customers to equal the number of customers in the arrival_queue
+    2. for (clock = 1;  num_customers > 0;  clock++)
+		1.  For all customers waiting on the queue to enter the store (i.e. those on the arrival_queue) that have an arrival_time == clock
+		    * remove them from the arrival_queue
+            * print the appropriate message (entering store)
+            * calculate what time they will be done shopping (hint: depends on the number of items)
+            * place them on the shopping_queue using the time they will be done shopping as the priority
+        2.  For all customers on the shopping_queue that are done shopping
+			* remove them from the shopping_queue
+			* print the appropriate message (done shopping)
+            * place them on the checker_queue (don't need a priority, use the same priority for all customers)
         // NOTE: this has to execute before you place customers on checkers, but you will have to implement placing
-        //       customers on checkers before you can test this part of the program
+        // customers on checkers before you can test this part of the program
         For all the customers currently being served by a checker that are done at time == clock
-
-            increment/decrement the checker's total cash
-            print the appropriate message (paid or stole message)
-            delete this customer
-            decrement the number of customers (this is used in the for loop)
-            set the checker to NULL (indicates it has no customer)
-            if the customer was a robber, update the checker so it will end its break at the correct time
-
-
-        While there is an available checker and there is a customer on the checker_queue
-
-            remove the customer from the checker_queue and assign it to an available checker (always pick the available checker w/the lowest index)
-            calculate the time the customer will be done checking-out/stealing (store this done time in struct Checker)
-            print the start checkout message
+		    * increment/decrement the checker's total cash
+            * print the appropriate message (paid or stole message)
+            * delete this customer
+            * decrement the number of customers (this is used in the for loop)
+            * set the checker to NULL (indicates it has no customer)
+            * if the customer was a robber, update the checker so it will end its break at the correct time
+        3. While there is an available checker and there is a customer on the checker_queue
+			* remove the customer from the checker_queue and assign it to an available checker (always pick the available checker w/the lowest index)
+            * calculate the time the customer will be done checking-out/stealing (store this done time in struct Checker)
+            * print the start checkout message
 
 
 
-Testing Your Program:
+##Testing Your Program:
 
 This program uses command line arguments and file input/output.  I will provide a script that handles the command line arguments and the file input/output.  However, when manually testing your program you must provide the command line arguments.  Look at the .cmd files in the test directory to see the command line arguments of each test.
 
