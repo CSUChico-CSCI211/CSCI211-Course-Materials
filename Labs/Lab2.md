@@ -156,57 +156,65 @@ Write a program (to_text.cpp) that reads zero or more single digits positive int
 
 Put this program in your ~/211/lab02_totext
 
-$ to_text
-1
-one
-2
-two
-3
-three
-^D
-$
+<pre>
+	$ to_text
+	1
+	one
+	2
+	two
+	3
+	three
+	^D
+	$
+</pre>
 
 NOTE: when you type ^D you will NOT see it (it is not printed to the terminal).  I put it in the above example to make it clear that the end of input is signaled by pressing ^D.
 
-To get credit, you must pass the posted tests (in your directory ~/211/lab02_to_text/tests and on the web at), and you must use a switch statement (the syntax of the switch statement is shown at the bottom of this web page).
+To get credit, you must pass the posted tests (in your directory ~/211/lab02_to_text/tests and on the web at), and you must use a switch statement (the syntax of the switch statement is shown at the bottom of [this web page).](http://www.cplusplus.com/doc/tutorial/control/)
 
 You may start with my echo_ints.cpp program.
 
-Turn in the file to_text.cpp
+[Turn in](https://turnin.ecst.csuchico.edu/ "Tyson's Turnin") the file to_text.cpp
 
-Exercise 2: Error Output
+##Exercise 2: Error Output
 
 Starting with the second programming assignment (p2), you will be required to detect and report errors.  All errors must be written to standard error.  Consider the following program (in your directory ~/211/lab02_even and on the web at  ~tyson/211/src/lab02_error)
 
-//error.cpp
+<pre>
+	//error.cpp
 
-#include <iostream>
-using namespace std;
+	#include <iostream>
+	using namespace std;
 
-int main()
-{
-// write to standard output
-cout << "written to standard output" << endl;
+	int main()
+	{
+	// write to standard output
+	cout << "written to standard output" << endl;
 
-// write to standard error
-cerr << "written to standard error" << endl;
+	// write to standard error
+	cerr << "written to standard error" << endl;
 
-// return 0 from main() if there are no errors
-return 0;
-}
+	// return 0 from main() if there are no errors
+	return 0;
+	}
+</pre>
 
 Compile and run this program:
 
-$ cd ~/211/lab02_error
-$ g++ -o error error.cpp
-$ error
-written to standard output
-written to standard error
-$
+<pre>
+	$ cd ~/211/lab02_error
+	$ g++ -o error error.cpp
+	$ error
+	written to standard output
+	written to standard error
+	$
+</pre>
 
 Since the default is for both standard output and standard error to be written to the current window, you cannot tell that the first string is written to standard output and the second string is written standard error.  However, you can redirect standard output to one file and standard error to a second file:
 
-$ error    >myout    2>myerr
+<pre>
+	$ error    >myout    2>myerr
+</pre>
 
 Look at the two files created (myout and myerr).  What is happening?
 
@@ -216,30 +224,32 @@ Put this file in the directory ~/211/lab02_even.
 
 After reading the integers:
 
-if all of the integers are even, write "all even" and a newline to standard output.
+* if all of the integers are even, write "all even" and a newline to **standard output.**
 
-else if any of the integers are not even, write "not all even" and a newline to standard error.
+* else if any of the integers are not even, write "not all even" and a newline to **standard error.**
 
-When there are no errors (when all the numbers are even) return 0 from main().  The Linux standard is that programs should return 0 from main() if there are no errors.
+When there are no errors (when all the numbers are even) **return 0 from main().**  The Linux standard is that programs should return 0 from main() if there are no errors.
 
-When there is an error (one or more numbers are not even) return 1 from main().
+When there is an error (one or more numbers are not even) **return 1 from main().**
 
 Do not return from main() until after you have printed the appropriate message.
 
 The tests for this exercise (in the directory ~/211/lab02_even/tests) have a .err file for each test.  The error files contain the error output (if any) and a .exit file that indicates the correct exit status (value returned by main()).
 
-Read how to test a program that has error output on the Introduction to Testing page.
+Read how to test a program that has error output on the [Introduction to Testing](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Testing") page.
 
 If a program is required to have error output, turnin.ecst.csuchico.edu will check the value returned by main() (the exit status).  It should be 0 if there were no errors, 1 if there were errors.  You can see the exit status of the program that just finished executed using the echo command:
 
-$ even < t01.in  >t01.myout   2>t01.myerr
-$ echo $?
-0
-$
+<pre>
+	$ even < t01.in  >t01.myout   2>t01.myerr
+	$ echo $?
+	0
+	$
+</pre>
 
 This means that the exit status of even was 0.
 
-Hints:
+###Hints:
 
 It would be a good idea to spend a little time trying to write this program without reading this hints section.  However, if you get stuck, go ahead and read the hints below.
 
@@ -247,17 +257,18 @@ The modulus operator (%) can be used to determine if a number is even or odd.  F
 
 Don't store all the values.  After each value is read, determine if it is odd or even.  If it is odd, set a flag and continue (a flag is a boolean variable)
 
-bool all_even = true;  // all_even is called a boolean flag, we start by assuming all the values are going to be even
+<pre>
+	bool all_even = true;  // all_even is called a boolean flag, we start by assuming all the values are going to be even
 
-while there are numbers to read
-if number is odd
-all_even = false;
-
-
-now look at the all_even flag to determine what you should write and what value should be returned from main()
+	while there are numbers to read
+		if number is odd
+			all_even = false;
 
 
+	now look at the all_even flag to determine what you should write and what value should be returned from main()
+</pre>
 
-To get credit, you must pass the posted tests (in the directory ~/211/lab02_even/tests and on the web at  lab02_even/tests)
 
-Turn in the file even.cpp
+To get credit, you must pass the posted tests (in the directory ~/211/lab02_even/tests and on the web at [lab02_even/tests](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/src/lab02_even/tests))
+
+[Turn in](https://turnin.ecst.csuchico.edu/ "Tyson's Turnin") the file even.cpp
