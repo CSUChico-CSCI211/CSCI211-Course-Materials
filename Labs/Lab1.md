@@ -1,4 +1,5 @@
-#CSCI 211 - Lab 1 - Introduction to Linux and the g++ Compiler
+#CSCI 211 - Lab 1
+##Introduction to Linux and the g++ Compiler
 
 ##Goals:
 
