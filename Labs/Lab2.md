@@ -80,7 +80,7 @@ See [Introduction to Testing](https://github.com/CSUChico-CSCI211/CSCI211-Course
 
 **You must use this mechanism in exercise 1 below.  You will also use it in most of the assignments this semester.**
 
-When you read using cin (e.g. cin >> my_integer) you can use the value returned from "cin >>" to detect the end of input.  Consider the following program (this program is called echo_ints.cpp and is in the src directory for this lab (~/211/lab02_echoints/echo_ints.cpp)):
+When you read using cin (e.g. cin >> my_integer) you can use **the value returned from "cin >>"** to detect the end of input.  Consider the following program (this program is called echo_ints.cpp and is in the src directory for this lab (~/211/lab02_echoints/echo_ints.cpp)):
 
 <pre>
 	#include <iostream>
@@ -110,9 +110,11 @@ When the user enters ^D (I use ^D to mean control-D), the "cin >> value" express
 
 Compile and run the program:
 
-$ cd ~/211/lab02_echoints
-$ g++ -o echo_ints echo_ints.cpp       // what does the -o option do?
-$ echo_ints
+<pre>
+	$ cd ~/211/lab02_echoints
+	$ g++ -o echo_ints echo_ints.cpp       // what does the -o option do?
+	$ echo_ints
+</pre>
 
 Now type some integers (each followed by pressing the enter key).
 
@@ -124,17 +126,21 @@ When typing values at the command prompt you need to explicitly mark the end of 
 
 Create a file with some numbers in it.  An easy way to do this is to use the cat utility and file redirection .  The following creates a new file called "nums" with the values 1,2,3, and 4:
 
-$ cat > nums
-1
-2
-3
-4
-^D
-$
+<pre>
+	$ cat > nums
+	1
+	2
+	3
+	4
+	^D
+	$
+</pre>
 
 Now run echo_ints and redirect the file you just created as input.
 
-$ echo_ints < nums
+<pre>
+	$ echo_ints < nums
+</pre>
 
 What happens?  Why does the program stop executing?
 
@@ -144,7 +150,7 @@ At this point you should be able to do all the above tasks (compile a program, r
 
 
 
-Exercise 1: Practice Detecting EOF and Using a Switch Statement
+##Exercise 1: Practice Detecting EOF and Using a Switch Statement
 
 Write a program (to_text.cpp) that reads zero or more single digits positive integers (0,1,2,3,...,9), and prints the corresponding text string ("zero", "one", "two", "three", ... , "nine").  When the end of input is reached, exit the program.
 
