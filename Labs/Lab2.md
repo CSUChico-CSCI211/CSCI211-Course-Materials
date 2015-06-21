@@ -29,71 +29,80 @@
 	echo $?
 </pre>
 
-Manual Testing
+###Manual Testing
 
-$ videos < tests/t01.in > results/t01.myout 2> results/t01.myerr
-$ vimdiff results/t01.myout tests/t01.myerr
-$ vimdiff results/t01.myerr tests/t01.myerr
+<pre>
+	$ videos < tests/t01.in > results/t01.myout 2> results/t01.myerr
+	$ vimdiff results/t01.myout tests/t01.myerr
+	$ vimdiff results/t01.myerr tests/t01.myerr
+</pre>
 
+###Tools
 
-Tools
-
-run_tests
-vd
-vde
-https://turnin.ecst.csuchico.edu/        NOTE: only works for https, University firewall stops http requests.
+* run_tests
+* vd
+* vde
+* https://turnin.ecst.csuchico.edu/        NOTE: only works for https, University firewall stops http requests.
 
 run_tests, vd, and vde should be in your ~/bin directory (they are put there when you downloaded 211.tar in during the first lab).
 
-$ cd
-$ cd bin
-$ ls run_tests vd vde
-run_test vd vde
+<pre>
+	$ cd
+	$ cd bin
+	$ ls run_tests vd vde
+	run_test vd vde
+</pre>
 
-If these files are not there, download them to your ~/bin directory  (create ~/bin if it does not exist).
+If these files are not there, download [them](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/bin) to your ~/bin directory  (create ~/bin if it does not exist).
 
 Once these files are in your ~/bin directory, make sure they work:
 
-$ cd
-$ which run_tests
+<pre>
+	$ cd
+	$ which run_tests
+</pre>
 
 If nothing is printed, follow the instructions on how to set up your path.
 
 When your path is correctly set up, you will see this:
 
+<pre>
 $ cd
 $ which run_tests
-/home/tyson/bin/run_tests
+/home/bryan/bin/run_tests
+</pre>
 
-With the "/home/tyson" replaced with your home directory.
+With the "/home/bryan" replaced with your home directory.
 
-See Introduction to Testing and How to Test Assignments Automatically for a detailed description of all of these.
+See [Introduction to Testing](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/Testing.md "Testing") and [How to Test Assignments Automatically](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/AutomaticTesting.md "Automatic Testing") for a detailed description of all of these.
 
-Detecting the end of input (often called EOF for "end of file")
+##Detecting the end of input (often called EOF for "end of file")
 
-You must use this mechanism in exercise 1 below.  You will also use it in most of the assignments this semester.
+**You must use this mechanism in exercise 1 below.  You will also use it in most of the assignments this semester.**
 
 When you read using cin (e.g. cin >> my_integer) you can use the value returned from "cin >>" to detect the end of input.  Consider the following program (this program is called echo_ints.cpp and is in the src directory for this lab (~/211/lab02_echoints/echo_ints.cpp)):
 
-#include <iostream>
-using namespace std;
+<pre>
+	#include <iostream>
+	using namespace std;
 
-int main()
-{
-int value;
+	int main()
+	{
+	int value;
 
-// as long as we can read an integer from standard input (cin)
-// when the user enters control-D the "cin >> value" will return false
-while (cin >> value)
-{
-// write the integer just read to standard output
-cout << "value = " << value << endl;
-}
+	// as long as we can read an integer from standard input (cin)
+	// when the user enters control-D the "cin >> value" will return false
+	while (cin >> value)
+	{
+	// write the integer just read to standard output
+	cout << "value = " << value << endl;
+	}
 
-// return 0 from main() if there are no errors
-return 0;
+	// return 0 from main() if there are no errors
+	return 0;
 
-}
+	}
+</pre>
 
 When the user enters an integer, the "cin >> value" expression returns true (recall that true is any non-zero value) and the body of the loop is executed.
 
