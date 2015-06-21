@@ -13,21 +13,21 @@
 
 ###Background
 
-	* PATH environment variable
-	* diff and vimdiff tools
-	* bash shell scripting
-	* file redirection
-	<pre>
-		<        standard input (stdin)
-		>        standard output (stdout)
-		2>      standard error (stderr) (see Exercise 2 below)
-	</pre>
-	* exit status
-	<pre>
-		return 0;
-		return 1;
-		echo $?
-	</pre>
+* PATH environment variable
+* diff and vimdiff tools
+* bash shell scripting
+* file redirection
+<pre>
+	<        standard input (stdin)
+	>        standard output (stdout)
+	2>      standard error (stderr) (see Exercise 2 below)
+</pre>
+* exit status
+<pre>
+	return 0;
+	return 1;
+	echo $?
+</pre>
 
 Manual Testing
 
