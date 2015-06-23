@@ -125,118 +125,146 @@ The above Makefile uses the following command-line options for the g++ compiler:
 
 
 
-Default Rules
+##Default Rules
 
 There are many default rules built into various versions of make.  Thus in a large project the makefile would not contain a rule for every single source file.
 
 When learning how to use make it is best to avoid the default rules and put in explicit rules for each file.
 
 
-Exercise 1: (must complete this google survey to get credit)
+##Exercise 1:
+(must complete this google survey to get credit)
 
-    cd to the lab03_hello directory
+cd to the lab03_hello directory
 
-        $ cd ~/211/lab03_hello
+<pre>
+    $ cd ~/211/lab03_hello
+</pre>
 
-    type the command
+type the command
 
-        $ make
-
-    What happened?                  Answer on the google survey.
-
-    type the command again
-
-        $ make
-
-    What happened?  Why?       Answer on the google survey.
-
-    look at the dates on the files hello and hello.cpp
-
-        $ ls -l
-
-    when hello is newer than hello.cpp, make does not try to recreate it
-
-    change the date on hello.cpp using the touch command
-
-        $ touch hello.cpp
-
-        touch just updates the last date changed to the current time
-
-    now look at the dates again
-
-        $ ls -l
-
-    what do you think will happen when you type make ?
-
-    type
-
-        $ make
-
-    What happened?  Why?           Answer on the google survey
-
-    now edit the file hello.cpp (using any editor such as scite) and make some change
-        for example: change the text that is printed
-
-    make sure you save the file
-
-    now type
-
-        $ make
-
-    what happened?  why?         Answer on the google survey
-
-Exercise 2: (must complete the rest of this google survey to get credit)
-
-    go to the lab03_sentence directory
-
-        $ cd ../lab03_sentence
-
-    the ".." means the parent directory (the parent of the current directory).  Alternatively you could have used the full path (~/211/lab03_sentence)
-
-    Why does main.o depend on sentence.h?        Answer on the google survey
-
-    type
-
-        $ make
-
-    type
-
-        $ touch sentence.h
-
-    type
-
-        $ make
-
-    Which files were recompiled?         Answer on the google survey
-
-    Why were these files recompiled when sentence.h was changed? (look carefully at the Makefile)         Answer on the google survey
-
-    This is an important aspect of make, ask if you don't understand why!
-
-Exercise 3: (must turn in a Makefile)
-
-    The directory lab03_makefile contains a program that uses two different objects: class Foo (in foo.h and foo.cpp) and class Bar (in bar.h and bar.cpp).  Create a makefile that compiles this program.
-
-    You may start by using the Makefile from Exercise 2.
-
-    Test your Makefile by compiling and running the program (the make order is not important as long as you can run the program):
-
+<pre>
     $ make
-    g++ -Wall -pedantic -g -std=c++11 -c main.cpp
-    g++ -Wall -pedantic -g -std=c++11 -c foo.cpp
-    g++ -Wall -pedantic -g -std=c++11 -c bar.cpp
-    g++ -Wall -pedantic -o foobar main.o foo.o bar.o
-    $ foobar
-    Foo(1,2)
-    Bar(3,4)
-    $
+</pre>
 
+*What happened?*                **Answer on the google survey.**
 
-    Turn in your Makefile.  turnin.ecst will not test your Makefile, I will grade them by reading them.  Since a Makefile can do anything (such as deleting all the files on a computer) turnin.ecst never runs Makefiles that have been turned in.
+type the command again
 
-    Hint: think carefully about the dependencies (the files listed after the target). For example, foo.cpp includes foo.h and thus foo.o depends on foo.cpp AND foo.h
+<pre>
+    $ make
+</pre>
 
-Exercise 4: Create a Course class
+*What happened?  Why?*      	**Answer on the google survey.**
+
+look at the dates on the files hello and hello.cpp
+
+<pre>
+    $ ls -l
+</pre>
+
+when hello is newer than hello.cpp, make does not try to recreate it
+
+change the date on hello.cpp using the touch command
+
+<pre>
+    $ touch hello.cpp
+</pre>
+
+*touch* just updates the last date changed to the current time
+
+now look at the dates again
+
+<pre>
+    $ ls -l
+</pre>
+
+what do you think will happen when you type make ?
+
+type
+
+<pre>
+    $ make
+</pre>
+
+What happened?  Why?           **Answer on the google survey**
+
+now edit the file hello.cpp (using any editor such as atom) and make some change
+for example: change the text that is printed
+
+make sure you save the file
+
+now type
+
+<pre>
+    $ make
+</pre>
+
+what happened?  why?         **Answer on the google survey**
+
+#Exercise 2:
+(must complete the rest of this google survey to get credit)
+
+go to the lab03_sentence directory
+
+<pre>
+    $ cd ../lab03_sentence
+</pre>
+
+the ".." means the parent directory (the parent of the current directory).  Alternatively you could have used the full path (~/211/lab03_sentence)
+
+Why does main.o depend on sentence.h?        **Answer on the google survey**
+
+type
+
+<pre>
+    $ make
+</pre>
+
+type
+
+<pre>
+    $ touch sentence.h
+</pre>
+
+type
+
+<pre>
+    $ make
+</pre>
+
+Which files were recompiled?         **Answer on the google survey**
+
+Why were these files recompiled when sentence.h was changed? (look carefully at the Makefile)
+**Answer on the google survey**
+
+***This is an important aspect of make, ask if you don't understand why!***
+
+##Exercise 3: (must turn in a Makefile)
+
+The directory lab03_makefile contains a program that uses two different objects: class Foo (in foo.h and foo.cpp) and class Bar (in bar.h and bar.cpp).  Create a makefile that compiles this program.
+
+You may start by using the Makefile from Exercise 2.
+
+Test your Makefile by compiling and running the program (the make order is not important as long as you can run the program):
+
+<pre>
+	$ make
+	g++ -Wall -pedantic -g -std=c++11 -c main.cpp
+	g++ -Wall -pedantic -g -std=c++11 -c foo.cpp
+	g++ -Wall -pedantic -g -std=c++11 -c bar.cpp
+	g++ -Wall -pedantic -o foobar main.o foo.o bar.o
+	$ foobar
+	Foo(1,2)
+	Bar(3,4)
+	$
+</pre>
+
+Turn in your Makefile.  turnin.ecst will not test your Makefile, I will grade them by reading them.  Since a Makefile can do anything (such as deleting all the files on a computer) turnin.ecst never runs Makefiles that have been turned in.
+
+Hint: think carefully about the dependencies (the files listed after the target). For example, foo.cpp includes foo.h and thus foo.o depends on foo.cpp AND foo.h
+
+##Exercise 4: Create a Course class
 
 Create a new class called Course (that is, create course.h and course.cpp).  You may start with this example (on Jaguar, copy it from ~tyson/211/example_src/object_start_here).
 
