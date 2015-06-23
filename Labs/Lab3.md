@@ -266,58 +266,66 @@ Hint: think carefully about the dependencies (the files listed after the target)
 
 ##Exercise 4: Create a Course class
 
-Create a new class called Course (that is, create course.h and course.cpp).  You may start with this example (on Jaguar, copy it from ~tyson/211/example_src/object_start_here).
+Create a new class called Course (that is, create course.h and course.cpp).  You may start [with this example](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/example_src/object_start_here/) (on Jaguar, copy it from ~tyson/211/example_src/object_start_here).
 
 The Course class should have a single constructor and a print function
 
-Course(string dept, int number, int time);
-void print();
+<pre>
+	Course(string dept, int number, int time);
+	void print();
+</pre>
 
 You need to figure out what member variables are required by class Course.
 
 Create a new file called schedule.cpp that contains a main() function to test your course class.  In your main() you should be able to use the Course class like this:
 
-Course programming("CSCI", 211, 1000);
-Course english("ENGL", 130, 1400);
-Course physics("PHYS", 204, 800);
+<pre>
+	Course programming("CSCI", 211, 1000);
+	Course english("ENGL", 130, 1400);
+	Course physics("PHYS", 204, 800);
 
-programming.print();
-english.print();
-physics.print();
+	programming.print();
+	english.print();
+	physics.print();
+</pre>
 
 The above calls should result in the following output (this output is in the tests/lab03_course directory in the file t01.out).
 
-CSCI 211 at 1000
-ENGL 130 at 1400
-PHYS 204 at 800
+<pre>
+	CSCI 211 at 1000
+	ENGL 130 at 1400
+	PHYS 204 at 800
+</pre>
 
 You can compile this program using this command (lab 4 explains a tool for compiling programs with multiple files):
 
 g++ -Wall -o schedule schedule.cpp course.cpp
 
-REMEMBER:  only include .h files (schedule.cpp must include course.h and course.cpp must include course.h).  NEVER INCLUDE .cpp FILES.
+REMEMBER:  only include .h files (schedule.cpp must include course.h and course.cpp must include course.h).  **NEVER INCLUDE .cpp FILES.**
 
-To get credit, you must pass the posted tests (in your directory ~/211/lab03_course, and on the web at ~tyson/211/src/lab03_course/tests).
+To get credit, you must pass the posted tests (in your directory ~/211/lab03_course, and on the web at [~tyson/211/src/lab03_course/tests](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/src/lab03_course/tests)).
 
-Turn in the files schedule.cpp, course.h, and course.cpp
+[Turn in](https://turnin.ecst.csuchico.edu/ "Tyson's Turnin") the files schedule.cpp, course.h, and course.cpp
 
-Exercise 5: Create class Video for p2.
+##Exercise 5: Create class Video for p2.
 
-Create the Video class you need for p2 and a simple main() to test it.
+Create the Video class you need for [p2](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/VideoRatingSystem.md "P2") and a simple main() to test it.
 
 If you have finished p2, all you have to do is create a main.cpp and turn in your video.h and video.cpp for this lab (be careful not to delete your 'real' main.cpp).
 
 The sample main() should be similar or identical to the following (you will have to add some other code before the main):
 
-int main()
-{
-    Video video1("Title One", "www.youtube.com/one", "Comment ONE", 1.1, 1);
-    Video video2("Title Two", "www.youtube.com/two", "Comment TWO", 2.2, 2);
+<pre>
+	int main()
+	{
+	    Video video1("Title One", "www.youtube.com/one", "Comment ONE", 1.1, 1);
+	    Video video2("Title Two", "www.youtube.com/two", "Comment TWO", 2.2, 2);
 
-    video1.print();
-    video2.print();
-    return 0;
-}
+	    video1.print();
+	    video2.print();
+	    return 0;
+	}
+</pre>
 
 If you have already written the constructor (Video::Video(...)) and your arguments are different than those listed above, your main() should use the arguments you are already using.
 
@@ -327,12 +335,15 @@ You will need to implement the class Video constructor (Video::Video(...)) and t
 
 The output of your program (using the main() above) should exactly match the following (~tyson/211/tests/lab03_video/t01.out). This is the test used by turnin.ecst.csuchico.edu:
 
-Title One, www.youtube.com/one, Comment ONE, 1.1, *
-Title Two, www.youtube.com/two, Comment TWO, 2.2, **
+<pre>
+	Title One, www.youtube.com/one, Comment ONE, 1.1, *
+	Title Two, www.youtube.com/two, Comment TWO, 2.2, **
+</pre>
 
 The single test will expect this output.
 
-To get credit, you must pass the posted tests (in yoru directory ~/211/lab03_video/tests and on the web at ~tyson/211/src/lab03_video/tests).
+To get credit, you must pass the posted tests (in yoru directory ~/211/lab03_video/tests and on the web at [~tyson/211/src/lab03_video/tests](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/labs/lab03.html)).
 
 Turn in  main.cpp, video.h, and video.cpp.  Turn in all three files even if you have completed p2.
+##Rest of Lab
 If you finish the lab exercises, you can work on your video (p2) assignment.  If you have finished the exercises and have finished (and turned in a working version) of the video assignment, you may leave early.  Check with me before you leave so I can verify that you have everything turned in.
