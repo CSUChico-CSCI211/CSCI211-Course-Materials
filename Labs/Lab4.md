@@ -124,6 +124,7 @@ type where at the (gdb) to see the list of functions that were called
 
 **ON SURVEY:** What error caused this program to terminate?
 <br>
+
 **ON SURVEY:**  What functions were called before the program crashed?
 
 notice that the where command told you the arguments to the functions f() and g()
@@ -148,16 +149,20 @@ Use the up command to go to the function that called f().
 
 run ddd with the executable p3
 
+<pre>
 	$ ddd p3
+</pre>
 
 press the run button or type run at the (gdb) to run this program
 
-ON SURVEY: Explain why this program has a segmentation fault.
+**ON SURVEY:** Explain why this program has a segmentation fault.
 
 Try printing the different variables:
 
+<pre>
 	(gdb) p cur
 	(gdb) p *cur
+</pre>
 
 Alternatively, you can double click on the "cur" in the text window.
 
@@ -167,25 +172,31 @@ You can find the error by watching the execution of the insert function.
 
 Insert a breakpoint at the first line of the insert function
 
+<pre>
 	(gdb) break 25
+</pre>
 
 now start the execution over again: press the run button to type
 
+<pre>
 	(gdb) run
-
+</pre>
 
 the execution will stop at line 25 (the breakpoint you set) when insert is called for the first time
 Notice the stop sign where the debugger stopped executing
 
-use the where command to see the run time stack
+use the *where* command to see the run time stack
+
+<pre>
 	Linked_list::insert() was called from line 41
 	its argument i = 1
+</pre>
 
-use the list command to see the code
+use the *list* command to see the code
 
 try printing the different variables using the print command (or by double clicking on the variables)
 
-	hint:  the variable this points to the current object, try printing this and *this
+hint:  the variable this points to the current object, try printing this and \*this
 
 
 Exercise 4:
