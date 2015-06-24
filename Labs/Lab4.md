@@ -123,7 +123,7 @@ type run at the (gdb) to run this program
 type where at the (gdb) to see the list of functions that were called
 
 **ON SURVEY:** What error caused this program to terminate?
-
+<br>
 **ON SURVEY:**  What functions were called before the program crashed?
 
 notice that the where command told you the arguments to the functions f() and g()
