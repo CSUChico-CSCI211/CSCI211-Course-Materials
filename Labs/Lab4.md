@@ -199,21 +199,23 @@ try printing the different variables using the print command (or by double click
 hint:  the variable this points to the current object, try printing this and \*this
 
 
-Exercise 4:
+##Exercise 4:
 
 Program p4 is the same program as p1 but is compiled w/o the -g option
 
 run gdb with the executable p4
 
+<pre>
 	$ gdb p4
+</pre>
 
 run the program
 
 type typing where at the (gdb)
 
-ON SURVEY: What is different about running p4 with gdb than running p1 with gdb?
+**ON SURVEY:** What is different about running p4 with gdb than running p1 with gdb?
 
-ON SURVEY: Is the p1 executable smaller or larger than the p4 executable?
+**ON SURVEY:** Is the p1 executable smaller or larger than the p4 executable?
 
-
-After completing the exercises and the survey, you may work on the Video List assignment (p3)
+##Finished?
+After completing the exercises and the survey, you may work on the Video List assignment ([p3](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/LinkedListVideos.md "P3"))
