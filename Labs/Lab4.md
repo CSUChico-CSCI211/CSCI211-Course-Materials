@@ -76,67 +76,75 @@ help|h|W/o and argument lists help topics.  If followed by a command, will descr
 
 ##Exercise Setup:
 
-MACINTOSH NOTE:  You cannot do this lab on a Mac unless you have GNU's g++ and gdb installed.  These are no longer part of xcode, you have to download and install them using homebrew.  It takes over an hour to install g++ using homebrew.
+**MACINTOSH NOTE:**  You cannot do this lab *natively* on a Mac unless you have GNU's g++ and gdb installed.  These are no longer part of xcode, you have to download and install them using homebrew.  It takes over an hour to install g++ using [homebrew.](http://brew.sh/) I recommend using a Debian Linux VM using VMware that is provided for free by the department through the same store portal as Dreamspark that you should have enrolled into when you created your ECST account. I also enroll all my students at the start of the semester, let me know if you didn't get the email or enrolled late as I might need to manually add you.
 
-I have created several sample programs for you to use with the debugger.  They should be in your 211/lab04_gdb directory.
+Tyson has created several sample programs for you to use with the debugger.  They should be in your 211/lab04_gdb directory.
 
 You can compile all the programs with one call to make:
 
+<pre>
 	$ cd ~/211/lab04_gdb
 	$ make
+</pre>
 
 make should not issue any errors, let me know if you get errors.
 
-You don't have to turn anything in for this lab but you must complete this google survey.
+You don't have to turn anything in for this lab but you must complete this [google survey.](http://goo.gl/forms/5d4cIFwdst "Lab4 Survey")
 
-Exercise 1:
+##Exercise 1:
 
 run gdb with the executable p1
 
+<pre>
 	$ gdb p1
+</pre>
 
 type run at the (gdb) to run this program
 
-ON SURVEY:  What error causes this program to terminate?
-ON SURVEY:  On what line does this program crash?
+**ON SURVEY:**  What error causes this program to terminate?
+**ON SURVEY:**  On what line does this program crash?
 
 type list at the (gdb) to list the source code
 
-ON SURVEY:  Explain the defect in the program that causes this problem.
+**ON SURVEY:**  Explain the defect in the program that causes this problem.
 
 type quit at the (gdb) to quit the debugger
 
-Exercise 2:
+##Exercise 2:
 
 run gdb with executable p2
 
+<pre>
 	$ gdb p2
+</pre>
 
 type run at the (gdb) to run this program
 
 type where at the (gdb) to see the list of functions that were called
 
-ON SURVEY: What error caused this program to terminate?
+**ON SURVEY:** What error caused this program to terminate?
 
-ON SURVEY:  What functions were called before the program crashed?
+**ON SURVEY:**  What functions were called before the program crashed?
 
 notice that the where command told you the arguments to the functions f() and g()
 
 you can use the print (p) function to print the values of a variable:
 
+<pre>
 	(gdb) p b
 	$1 = 52
+</pre>
 
-ON SURVEY: What is the address of the variable b?
+**ON SURVEY:** What is the address of the variable b?
 
 gdb is currently pointing to the code in function f().  If you use the up command it will be pointing at the code in the function that called f().
 
 Use the up command to go to the function that called f().
 
-ON SURVEY: What is the address of the variable a?
+**ON SURVEY:** What is the address of the variable a?
 
 
-Exercise 3:
+##Exercise 3:
 
 run ddd with the executable p3
 
