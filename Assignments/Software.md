@@ -18,9 +18,9 @@ You will also need an editor. I recommend Sublime or Atom.
 ## Option 3: Use a Virtual Machine
 Install a program on your Window or Apple computer that will allow you to install and run Linux as a program on your native OS.
 
-I recommend using VMware. We have a site licence that allows you to download and install a professional version.
+I recommend using VMware. We have a site license that allows you to download and install a paid version for free.
 
-Log into accounts.ecst.csuchico.edu and select Request/Renew MSDN Academic Alliance/VMWare access. Once you request access to MSDN/VMware, you will receive an email (on your @mail.csuchico.edu account) with instructions on how to log in and download software. The email usually arrive the next business day. You will be able to download many Microsoft products (include the OS) and VMware. I
+Log into accounts.ecst.csuchico.edu and select Request/Renew MSDN Academic Alliance/VMWare access. Once you request access to MSDN/VMware, you will receive an email (on your @mail.csuchico.edu account) with instructions on how to log in and download software. The email usually arrive the next business day. You will be able to download many Microsoft products (include the OS) and VMware. I enroll all my classes in the VMAP program for VMware products at the start of the semester, but let me know if you don't have access after registering for an account.
 
 
 ## Option 4: Install the UNIX/Linux emulator Cygwin on your windows machine.
@@ -35,7 +35,7 @@ This is not the best option for two reasons
 
 1. Department machines sometimes go down for entire weekends.
 2. You cannot use any graphical programs (such as the Sublime or Atom editor) (actually you can, but it tends to be slow and is hard to setup).
- 1. Atom has a plugin that allows you to browse/edit SFTP code inside the program. But the other issues w/ this approach still exist.
+ 1. Atom has a plugin that allows you to browse/edit SFTP code inside the program. But the other issues w/ this approach still exist. And these plugins are buggy.
 3. You have to copy to files to your computer before you can turn them in (I recommend using WinsSCP or install Cygwin and use sftp).
 
 Download the program putty
@@ -50,11 +50,11 @@ On Apple computers, the Apple C++ compiler pretends to be the GNU g++ compiler. 
 
 You will need the following software (the Linux & Cygwin instructions below include instructions for installing all of these):
 
-    GNU's C++ compiler, called g++ (version 4.8 or higher)
-    make (a utility for managing the compilation of programs)
-    gdb (GNU's debugger for g++) and/or ddd (GNU's graphical debugger)
-    an editor: most any editor will work, I use vim but it is hard to learn.  Scite is easy to learn and is installed on the lab computers.  Many students love Sublime.
-    a file transfer utility (such as sftp) to copy files to/from your home computer and the Department's computers
+* GNU's C++ compiler, called g++ (version 4.8 or higher)
+* make (a utility for managing the compilation of programs)
+* gdb (GNU's debugger for g++) and/or ddd (GNU's graphical debugger)
+* an editor: most any editor will work, I use Atom or Submlime. Atom is installed on the lab computers. Many students love Sublime, but Atom is a new editor from GitHub.
+* a file transfer utility (such as sftp) to copy files to/from your home computer and the Department's computers
 
 All of these are on the department Linux computers, and all are available for Linux, OSX, and cygwin.
 
