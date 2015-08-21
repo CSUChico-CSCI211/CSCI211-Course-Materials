@@ -13,3 +13,11 @@
 <a href="https://atom.io/">Atom Editor</a> - Free "hackable" text editor from GitHub. Should be installed on the lab machines as well.
 <br><br>
 <a href="https://moodle.csuchico.edu">Moodle</a> - We will be using the Moodle Learning Management System (LMS) this semester. Registering for an account and enrolling in this course on Moodle should also automatically enroll you in our <a href="http://piazza.com/">Piazza</a> discussion board. The enrollment key was given out in lecture, email me if you missed the first lecture and didn't get the enrollment key for Moodle.
+<br><br>
+<a href="http://www.ecst.csuchico.edu/~tyson/classes/211.f15/exams.html">Practice Exams</a> - As my course will be mirroring Tyson's your exams will be very similar to those of the other section and those that Tyson has used in the past. These are good study guides.
+<br><br>
+<a href="http://www.ecst.csuchico.edu/~tyson/classes/211.f15/downloads">Downloads</a> - There are a lot of resources here that Tyson has posted for the assignments/labs.
+<br><br>
+<a href="http://www.ecst.csuchico.edu/~tyson/classes/211.f15/src/">src</a> - This is a source directory with any starting code/source you might need for the labs/assignments. This is referenced/mentioned in the assignments/labs.
+<br><br>
+<a href="http://www.ecst.csuchico.edu/~tyson/classes/211.f15/">Tyson's Fall 2015 page</a> - There may be other examples/materials here that might be useful for the course. Anything used in our lectures will be in the Google Shared Folder. 
