@@ -334,7 +334,7 @@ Your Program:<br>
 
 
 
-<big>I have posted some sample tests in the <a href="src/p1/tests">src/p1/tests</a> directory (see <a href="http://www.ecst.csuchico.edu/%7Etyson/classes/general/how_to_download_files.html">how to download files</a> to copy my files to your current directory)</big>.<br><big>
+<big>I have posted some sample tests in the <a href="http://www.ecst.csuchico.edu/~tyson/classes/211.f15/src/p1/tests">src/p1/tests</a> directory (see <a href="http://www.ecst.csuchico.edu/%7Etyson/classes/general/how_to_download_files.html">how to download files</a> to copy my files to your current directory)</big>.<br><big>
 
 
 
@@ -342,7 +342,7 @@ Your Program:<br>
 
 
 
-The <a href="../general/how_to_test.html">testing instructions</a> contain instructions for testing your program using my sample tests.<br>
+The <a href="http://www.ecst.csuchico.edu/~tyson/classes/general/how_to_test.html">testing instructions</a> contain instructions for testing your program using my sample tests.<br>
 
 
 
