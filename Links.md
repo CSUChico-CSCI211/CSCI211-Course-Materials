@@ -1,4 +1,4 @@
-<a href="">Google Drive Shared Folder</a> - Shared folder of lecture slides, gradesheet, and other materials.
+<a href="https://goo.gl/YZd2kH">Google Drive Shared Folder</a> - Shared folder of lecture slides, gradesheet, and other materials.
 <br><br>
 <a href="https://github.com/">GitHub</a> - Version Control & Open Source Code Repository
 <br><br>
@@ -20,4 +20,4 @@
 <br><br>
 <a href="http://www.ecst.csuchico.edu/~tyson/classes/211.f15/src/">src</a> - This is a source directory with any starting code/source you might need for the labs/assignments. This is referenced/mentioned in the assignments/labs.
 <br><br>
-<a href="http://www.ecst.csuchico.edu/~tyson/classes/211.f15/">Tyson's Fall 2015 page</a> - There may be other examples/materials here that might be useful for the course. Anything used in our lectures will be in the Google Shared Folder. 
+<a href="http://www.ecst.csuchico.edu/~tyson/classes/211.f15/">Tyson's Fall 2015 page</a> - There may be other examples/materials here that might be useful for the course. Anything used in our lectures will be in the Google Shared Folder.
