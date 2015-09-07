@@ -133,7 +133,7 @@ When learning how to use make it is best to avoid the default rules and put in e
 
 
 ##Exercise 1:
-(must complete this google survey to get credit)
+(must complete [this google survey](http://goo.gl/forms/Tjd9in9eRq) to get credit)
 
 cd to the lab03_hello directory
 
@@ -203,7 +203,7 @@ now type
 what happened?  why?         **Answer on the google survey**
 
 #Exercise 2:
-(must complete the rest of this google survey to get credit)
+(must complete the rest of [this google survey](http://goo.gl/forms/Tjd9in9eRq) to get credit)
 
 go to the lab03_sentence directory
 
