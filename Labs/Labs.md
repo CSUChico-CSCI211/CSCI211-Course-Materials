@@ -3,7 +3,7 @@
 |1| Week 1| [Introduction to Linux and the g++ Compiler](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/labs/lab01.html)|
 |2| Week 2| [Detecting End of Input, Using Standard Error, Returning from main()](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/labs/lab02.html)|
 |3| Week 3| [The make utility, Practice Creating Objects](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Labs/Lab3.md)|
-|4| Week 4| [Introduction to the gdb and ddd debuggers  ](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/labs/lab04.html)|
+|4| Week 4| [Introduction to the gdb and ddd debuggers  ](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Labs/Lab4.md)|
 |5| Week 5| [Vim Editor, Linked List Practice, Help with Video List Assignment (p3)](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/labs/lab05.html)|
 |6| Week 6| [Practice midterm problems](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/labs/lab06.html)|
 |7| Week 7| [Stack of doubles for the Calculator assignment](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/labs/lab07.html)|
