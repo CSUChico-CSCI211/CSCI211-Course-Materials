@@ -7,7 +7,7 @@
 
 ##Required Survey
 
-You do not have to turn in any files for this lab but you do have to [complete this survey.](http://goo.gl/forms/5d4cIFwdst "Lab4 Survey")
+You do not have to turn in any files for this lab but you do have to [complete this survey.](http://goo.gl/forms/QSF3jPrZaB "Lab4 Survey")
 
 The survey is worth 3 points.
 
@@ -89,7 +89,7 @@ You can compile all the programs with one call to make:
 
 make should not issue any errors, let me know if you get errors.
 
-You don't have to turn anything in for this lab but you must complete this [google survey.](http://goo.gl/forms/5d4cIFwdst "Lab4 Survey")
+You don't have to turn anything in for this lab but you must complete this [google survey.](http://goo.gl/forms/QSF3jPrZaB "Lab4 Survey")
 
 ##Exercise 1:
 
@@ -218,4 +218,4 @@ type typing where at the (gdb)
 **ON SURVEY:** Is the p1 executable smaller or larger than the p4 executable?
 
 ##Finished?
-After completing the exercises and the survey, you may work on the Video List assignment ([p3](https://github.com/CSUChico-CSCI211/CSCI211-Course-Materials/blob/master/Assignments/LinkedListVideos.md "P3"))
+After completing the exercises and the survey, you may work on the Video List assignment ([p3](http://www.ecst.csuchico.edu/~tyson/classes/211.f15/p3.html "P3"))
